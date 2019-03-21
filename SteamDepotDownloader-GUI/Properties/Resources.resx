@@ -163,4 +163,25 @@
   <data name="SteamGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SteamGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ClearFileListQuestion" xml:space="preserve">
+    <value>Clear File List?</value>
+  </data>
+  <data name="FileListLoaded" xml:space="preserve">
+    <value>File List Loaded</value>
+  </data>
+  <data name="ParamterError" xml:space="preserve">
+    <value>Invalid Paramter!</value>
+  </data>
+  <data name="CacheCleared" xml:space="preserve">
+    <value>Cache Cleared</value>
+  </data>
+  <data name="DepotNotListOrNotSupport" xml:space="preserve">
+    <value>Depot {0} not listed for app {1}  or not available on this platform</value>
+  </data>
+  <data name="NoAnyDepots" xml:space="preserve">
+    <value>Couldn't find any depots to download for app {0}</value>
+  </data>
+  <data name="NotAvailableForThisAccount" xml:space="preserve">
+    <value>App {0} ({1}) is not available from this account.</value>
+  </data>
 </root>

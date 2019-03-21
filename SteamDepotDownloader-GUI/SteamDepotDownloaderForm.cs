@@ -22,7 +22,7 @@ namespace SteamDepotDownloader_GUI
 
         public bool UseFileRegex;
         public List<string> AllowFileList=new List<string>();
-        public string InstallDir="./";
+        public string InstallDir="./Download";
 
         public delegate void UpdateBetaPasswordRecordDelegate(uint AppID, uint DepotID, string Branch, string BetaPassword);
         public UpdateBetaPasswordRecordDelegate UbpRDelegate;
@@ -43,6 +43,20 @@ namespace SteamDepotDownloader_GUI
                 Dc.UsingFileList = Dr.FileToDownload==null?false:true;
                 Dc.InstallDirectory = Dr.InstallDir;
                 Dc.ForceDepot = !Dr.NoForceDepot;
+                Dc.FilesToDownloadRegex = new List<System.Text.RegularExpressions.Regex>();
+                Dc.DownloadAllPlatforms = Dr.AllPlatforms;
+                if (Dr.FileRegex != null)
+                {
+                    foreach (string regex in Dr.FileRegex)
+                    {
+                        try
+                        {
+                            Dc.FilesToDownloadRegex.Add(new System.Text.RegularExpressions.Regex(
+                                regex, System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnoreCase));
+                        }
+                        catch { };
+                    }
+                }
                 DownloadProgressBar Dpb = new DownloadProgressBar();
                 Dc.OnReportProgressEvent += Dpb.OnDownloadProgress;
                 Dc.OnDownloadFinishedEvent += Dpb.OnDownloadFinished;
@@ -166,6 +180,43 @@ namespace SteamDepotDownloader_GUI
             }
         }
 
+        public void CreateDownloadTask(string DownloadName,DownloadConfig Dc)
+        {
+            DownloadProgressBar Dpb = new DownloadProgressBar();
+            Dc.OnReportProgressEvent += Dpb.OnDownloadProgress;
+            Dc.OnDownloadFinishedEvent += Dpb.OnDownloadFinished;
+            var TargetDownloader = new ContentDownloader();
+            Program.DownloaderInstances.Add(TargetDownloader);
+            Dpb.RestartDownload += TargetDownloader.RestartDownload;
+            Dpb.StopDownload += TargetDownloader.StopDownload;
+            Dpb.CancelDownload += this.CancelDownload;
+            Dpb.OnDownloadFinishedReport += this.OnDownloadFinished;
+            Dpb.InitDownloading(DownloadName, Dc.AppID, Dc.DepotID, Dc.Branch);
+            this.panelDownloading.Controls.Add(Dpb);
+            RegroupDownloadProgressControl();
+            DownloadRecord Dr = new DownloadRecord();
+            Dr.AppID = Dc.AppID;
+            Dr.DepotID = Dc.DepotID;
+            Dr.BranchName = Dc.Branch;
+            Dr.FileToDownload = AllowFileList;
+            Dr.InstallDir = InstallDir;
+            Dr.NoForceDepot = this.checkBox3.Checked;
+            Dr.DownloadName = DownloadName;
+            Dr.MaxDownload = Dc.MaxDownloads;
+            Dr.MaxServer = Dc.MaxServers;
+            Dr.AllPlatforms = Dc.DownloadAllPlatforms;
+            if(Dc.FilesToDownloadRegex!=null)
+            {
+                Dr.FileRegex = new List<string>();
+                foreach (System.Text.RegularExpressions.Regex Fileregex in Dc.FilesToDownloadRegex)
+                    Dr.FileRegex.Add(Fileregex.ToString());
+            }
+            ConfigStore.TheConfig.DownloadRecord.Add(Dr);
+            ConfigStore.Save();
+            TargetDownloader.Config = Dc;
+            TargetDownloader.RestartDownload();
+        }
+
         private void buttonDownload_Click(object sender, EventArgs e)
         {
             var listDepotIDs = (List<uint>)this.listDepots.Tag;
@@ -195,39 +246,19 @@ namespace SteamDepotDownloader_GUI
             Dc.UsingFileList = this.checkBox1.Checked;
             Dc.InstallDirectory = InstallDir;
             Dc.ForceDepot = !this.checkBox3.Checked&&this.listDepots.SelectedIndex>=0;
+            Dc.MaxDownloads = Math.Max(0, ConfigStore.TheConfig.MaxDownload);
+            Dc.MaxServers = Math.Max(0, ConfigStore.TheConfig.MaxServer);
+            Dc.DownloadAllPlatforms = this.checkBox4.Checked;
             if (Dc.ForceDepot)
                 Dc.DepotID = DepotID;
             else
                 Dc.DepotID = ContentDownloader.INVALID_DEPOT_ID;
-            DownloadProgressBar Dpb = new DownloadProgressBar();
-            Dc.OnReportProgressEvent += Dpb.OnDownloadProgress;
-            Dc.OnDownloadFinishedEvent += Dpb.OnDownloadFinished;
-            var TargetDownloader = new ContentDownloader();
-            Program.DownloaderInstances.Add(TargetDownloader);
-            Dpb.RestartDownload += TargetDownloader.RestartDownload;
-            Dpb.StopDownload += TargetDownloader.StopDownload;
-            Dpb.CancelDownload += this.CancelDownload;
-            Dpb.OnDownloadFinishedReport += this.OnDownloadFinished;
             string DownloadName;
             if (Dc.ForceDepot)
                 DownloadName = depotsValue["name"].AsString();
             else
                 DownloadName = ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
-            Dpb.InitDownloading(DownloadName, AppID, DepotID, Dc.Branch);
-            this.panelDownloading.Controls.Add(Dpb);
-            RegroupDownloadProgressControl();
-            DownloadRecord Dr = new DownloadRecord();
-            Dr.AppID = AppID;
-            Dr.DepotID = DepotID;
-            Dr.BranchName = Dc.Branch;
-            Dr.FileToDownload = AllowFileList;
-            Dr.InstallDir= InstallDir;
-            Dr.NoForceDepot= this.checkBox3.Checked;
-            Dr.DownloadName = DownloadName;
-            ConfigStore.TheConfig.DownloadRecord.Add(Dr);
-            ConfigStore.Save();
-            TargetDownloader.Config = Dc;
-            TargetDownloader.RestartDownload();
+            CreateDownloadTask(DownloadName,Dc);
         }
 
         public void UpdateBetaPasswordRecord(uint AppID,uint DepotID,string Branch,string BetaPassword)
@@ -411,6 +442,11 @@ namespace SteamDepotDownloader_GUI
             {
                 (new Login()).ShowDialog();
             }
+        }
+
+        private void buttonManuallyInput_Click(object sender, EventArgs e)
+        {
+            new AdvancedInput().ShowDialog();
         }
     }
 }

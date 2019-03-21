@@ -62,6 +62,7 @@
             this.folderBrowserDialogMain = new System.Windows.Forms.FolderBrowserDialog();
             this.textBoxAppSearch = new System.Windows.Forms.TextBox();
             this.pictureAvatar = new System.Windows.Forms.PictureBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupDepotInfo.SuspendLayout();
             this.groupBoxDownloading.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -254,7 +255,7 @@
             // 
             // buttonDownload
             // 
-            this.buttonDownload.Location = new System.Drawing.Point(511, 283);
+            this.buttonDownload.Location = new System.Drawing.Point(511, 306);
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(209, 23);
             this.buttonDownload.TabIndex = 15;
@@ -266,7 +267,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(606, 268);
+            this.label7.Location = new System.Drawing.Point(608, 291);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(17, 12);
             this.label7.TabIndex = 16;
@@ -278,9 +279,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxDownloading.Controls.Add(this.panelDownloading);
-            this.groupBoxDownloading.Location = new System.Drawing.Point(484, 312);
+            this.groupBoxDownloading.Location = new System.Drawing.Point(484, 335);
             this.groupBoxDownloading.Name = "groupBoxDownloading";
-            this.groupBoxDownloading.Size = new System.Drawing.Size(236, 347);
+            this.groupBoxDownloading.Size = new System.Drawing.Size(236, 324);
             this.groupBoxDownloading.TabIndex = 17;
             this.groupBoxDownloading.TabStop = false;
             this.groupBoxDownloading.Text = "DownloadingDepot";
@@ -294,7 +295,7 @@
             this.panelDownloading.AutoScrollMinSize = new System.Drawing.Size(0, 350);
             this.panelDownloading.Location = new System.Drawing.Point(6, 21);
             this.panelDownloading.Name = "panelDownloading";
-            this.panelDownloading.Size = new System.Drawing.Size(221, 320);
+            this.panelDownloading.Size = new System.Drawing.Size(221, 297);
             this.panelDownloading.TabIndex = 0;
             // 
             // buttonSettings
@@ -314,8 +315,9 @@
             this.buttonManuallyInput.Name = "buttonManuallyInput";
             this.buttonManuallyInput.Size = new System.Drawing.Size(157, 32);
             this.buttonManuallyInput.TabIndex = 19;
-            this.buttonManuallyInput.Text = "Manually Input";
+            this.buttonManuallyInput.Text = "Advanced";
             this.buttonManuallyInput.UseVisualStyleBackColor = true;
+            this.buttonManuallyInput.Click += new System.EventHandler(this.buttonManuallyInput_Click);
             // 
             // checkBox1
             // 
@@ -330,13 +332,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBox4);
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Location = new System.Drawing.Point(511, 146);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(209, 119);
+            this.groupBox2.Size = new System.Drawing.Size(209, 142);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Download Setting";
@@ -364,11 +367,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 88);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(6, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 23);
             this.button1.TabIndex = 21;
             this.button1.Text = "Choose Install Directory";
+            this.toolTipMain.SetToolTip(this.button1, "./Download");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -397,6 +403,17 @@
             this.pictureAvatar.TabIndex = 23;
             this.pictureAvatar.TabStop = false;
             this.pictureAvatar.Click += new System.EventHandler(this.pictureAvatar_Click);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(14, 84);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(156, 16);
+            this.checkBox4.TabIndex = 24;
+            this.checkBox4.Text = "Download all platforms";
+            this.toolTipMain.SetToolTip(this.checkBox4, "Ignore what you select in Depots");
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // SteamDepotDownloaderForm
             // 
@@ -473,6 +490,7 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox textBoxAppSearch;
         private System.Windows.Forms.PictureBox pictureAvatar;
+        private System.Windows.Forms.CheckBox checkBox4;
     }
 }
 

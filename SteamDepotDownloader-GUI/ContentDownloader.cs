@@ -443,6 +443,7 @@ namespace DepotDownloader
                 {
                     string contentName = GetAppOrDepotName( INVALID_DEPOT_ID, Config.AppID );
                     Logger.Error( "App {0} ({1}) is not available from this account.", Config.AppID, contentName );
+                    Config.FireOnDownloadFinishedEvent(false, string.Format(SteamDepotDownloader_GUI.Properties.Resources.NotAvailableForThisAccount, Config.AppID, contentName));
                     return;
                 }
             }
@@ -490,17 +491,21 @@ namespace DepotDownloader
                 if (depotIDs.Count == 0 && Config.DepotID == INVALID_DEPOT_ID)
                 {
                     Logger.Error( "Couldn't find any depots to download for app {0}", Config.AppID );
+                    Config.FireOnDownloadFinishedEvent(false, string.Format(SteamDepotDownloader_GUI.Properties.Resources.NoAnyDepots, Config.AppID));
                     return;
                 }
                 else if ( depotIDs.Count == 0 )
                 {
                     var msg = $"Depot {Config.DepotID} not listed for app {Config.AppID}";
+
                     if ( !Config.DownloadAllPlatforms )
                     {
                         msg += " or not available on this platform";
                     }
 
                     Logger.Error(msg);
+                    Config.FireOnDownloadFinishedEvent(false, 
+                        string.Format(SteamDepotDownloader_GUI.Properties.Resources.NotAvailableForThisAccount,Config.DepotID,Config.AppID));
                     return;
                 }
             }
@@ -695,6 +700,7 @@ namespace DepotDownloader
                         if ( depotManifest == null )
                         {
                             Logger.Error( "\nUnable to download manifest {0} for depot {1}", depot.manifestId, depot.id );
+                            Config.FireOnDownloadFinishedEvent(false, string.Format("\nUnable to download manifest {0} for depot {1}", depot.manifestId, depot.id));
                             return;
                         }
 

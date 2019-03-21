@@ -22,11 +22,17 @@ namespace DepotDownloader
         [ProtoMember(6, IsRequired = false)]
         public string BetaPassword;
         [ProtoMember(7, IsRequired = false)]
-        public string FileRegex;
+        public List<string> FileRegex;
         [ProtoMember(8, IsRequired = false)]
         public List<string> FileToDownload;
         [ProtoMember(9, IsRequired = false)]
         public bool NoForceDepot;
+        [ProtoMember(10, IsRequired = false)]
+        public int MaxServer;
+        [ProtoMember(11, IsRequired = false)]
+        public int MaxDownload;
+        [ProtoMember(12, IsRequired = false)]
+        public bool AllPlatforms;
     }
 
     [ProtoContract]
@@ -46,6 +52,11 @@ namespace DepotDownloader
 
         [ProtoMember(6)]
         public Dictionary<uint, ulong> LastManifests { get; set; }
+
+        [ProtoMember(7, IsRequired = false)]
+        public int MaxServer = 8;
+        [ProtoMember(8, IsRequired = false)]
+        public int MaxDownload = 4;
 
         string FileName = null;
 

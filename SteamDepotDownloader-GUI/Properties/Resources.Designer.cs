@@ -88,11 +88,38 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cache Cleared.
+        /// </summary>
+        internal static string CacheCleared {
+            get {
+                return ResourceManager.GetString("CacheCleared", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Choose Install Directory.
         /// </summary>
         internal static string ChooseInstallDirectory {
             get {
                 return ResourceManager.GetString("ChooseInstallDirectory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear File List?.
+        /// </summary>
+        internal static string ClearFileListQuestion {
+            get {
+                return ResourceManager.GetString("ClearFileListQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Depot {0} not listed for app {1}  or not available on this platform.
+        /// </summary>
+        internal static string DepotNotListOrNotSupport {
+            get {
+                return ResourceManager.GetString("DepotNotListOrNotSupport", resourceCulture);
             }
         }
         
@@ -124,6 +151,15 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File List Loaded.
+        /// </summary>
+        internal static string FileListLoaded {
+            get {
+                return ResourceManager.GetString("FileListLoaded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Steam login failed!Try check your account and password..
         /// </summary>
         internal static string LoginFailed {
@@ -142,6 +178,15 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Couldn&apos;t find any depots to download for app {0}.
+        /// </summary>
+        internal static string NoAnyDepots {
+            get {
+                return ResourceManager.GetString("NoAnyDepots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No valid depot key..
         /// </summary>
         internal static string NoDepotKey {
@@ -156,6 +201,24 @@ namespace SteamDepotDownloader_GUI.Properties {
         internal static string NoManifestID {
             get {
                 return ResourceManager.GetString("NoManifestID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to App {0} ({1}) is not available from this account..
+        /// </summary>
+        internal static string NotAvailableForThisAccount {
+            get {
+                return ResourceManager.GetString("NotAvailableForThisAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Paramter!.
+        /// </summary>
+        internal static string ParamterError {
+            get {
+                return ResourceManager.GetString("ParamterError", resourceCulture);
             }
         }
         

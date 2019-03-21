@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedInput.Designer.cs">
+      <DependentUpon>AdvancedInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="AutoLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="SteamDepotDownloaderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,9 @@
     <Compile Include="Waiting.Designer.cs">
       <DependentUpon>Waiting.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdvancedInput.resx">
+      <DependentUpon>AdvancedInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AutoLogin.resx">
       <DependentUpon>AutoLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SteamDepotDownloaderForm.resx">
       <DependentUpon>SteamDepotDownloaderForm.cs</DependentUpon>
