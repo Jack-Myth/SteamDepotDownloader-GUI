@@ -14,6 +14,7 @@ namespace SteamDepotDownloader_GUI
     {
         int MaxDownload;
         int MaxServer;
+        bool MinimizeToTray;
         public int Clamp(int A,int B,int V)
         {
             return Math.Min(Math.Max(V, A), B);
@@ -24,8 +25,10 @@ namespace SteamDepotDownloader_GUI
             this.LabelVersion.Text = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
             MaxDownload = DepotDownloader.ConfigStore.TheConfig.MaxDownload - 1;
             MaxServer = DepotDownloader.ConfigStore.TheConfig.MaxServer - 1;
+            MinimizeToTray = DepotDownloader.ConfigStore.TheConfig.MinimizeToTray;
             this.comboBoxMaxDownload.SelectedIndex = Clamp(0, 19, MaxDownload);
             this.comboBoxMaxServer.SelectedIndex = Clamp(0, 19, MaxServer);
+            this.checkBoxNotify.Checked = MinimizeToTray;
         }
 
         private void buttonClearCache_Click(object sender, EventArgs e)
@@ -39,6 +42,9 @@ namespace SteamDepotDownloader_GUI
                 }
                 catch { };
             }
+            DepotDownloader.ConfigStore.TheConfig.LoginKeys.Clear();
+            DepotDownloader.ConfigStore.TheConfig.LastManifests.Clear();
+            DepotDownloader.ConfigStore.Save();
             MessageBox.Show(Properties.Resources.CacheCleared, "Settings", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -70,6 +76,26 @@ namespace SteamDepotDownloader_GUI
                 }
             }
             catch { };
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Jack-Myth/SteamDepotDownloader-GUI/releases");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Jack-Myth/SteamDepotDownloader-GUI");
+        }
+
+        private void checkBoxNotify_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.checkBoxNotify.Checked!=MinimizeToTray)
+            {
+                MinimizeToTray = this.checkBoxNotify.Checked;
+                DepotDownloader.ConfigStore.TheConfig.MinimizeToTray = this.checkBoxNotify.Checked;
+                DepotDownloader.ConfigStore.Save();
+            }
         }
     }
 }

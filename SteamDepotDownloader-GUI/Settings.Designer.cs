@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.buttonClearCache = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -36,136 +37,125 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxMaxDownload = new System.Windows.Forms.ComboBox();
+            this.checkBoxNotify = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonClearCache
             // 
-            this.buttonClearCache.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClearCache.Location = new System.Drawing.Point(12, 107);
+            resources.ApplyResources(this.buttonClearCache, "buttonClearCache");
             this.buttonClearCache.Name = "buttonClearCache";
-            this.buttonClearCache.Size = new System.Drawing.Size(155, 23);
-            this.buttonClearCache.TabIndex = 0;
-            this.buttonClearCache.Text = "Clear Cache";
             this.buttonClearCache.UseVisualStyleBackColor = true;
             this.buttonClearCache.Click += new System.EventHandler(this.buttonClearCache_Click);
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(12, 207);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Designed By JackMyth";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(12, 178);
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Check New Version";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // LabelVersion
             // 
-            this.LabelVersion.Location = new System.Drawing.Point(10, 370);
+            resources.ApplyResources(this.LabelVersion, "LabelVersion");
             this.LabelVersion.Name = "LabelVersion";
-            this.LabelVersion.Size = new System.Drawing.Size(155, 13);
-            this.LabelVersion.TabIndex = 3;
-            this.LabelVersion.Text = "version";
-            this.LabelVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // comboBoxMaxServer
             // 
+            resources.ApplyResources(this.comboBoxMaxServer, "comboBoxMaxServer");
             this.comboBoxMaxServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaxServer.FormattingEnabled = true;
             this.comboBoxMaxServer.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"});
-            this.comboBoxMaxServer.Location = new System.Drawing.Point(14, 24);
+            resources.GetString("comboBoxMaxServer.Items"),
+            resources.GetString("comboBoxMaxServer.Items1"),
+            resources.GetString("comboBoxMaxServer.Items2"),
+            resources.GetString("comboBoxMaxServer.Items3"),
+            resources.GetString("comboBoxMaxServer.Items4"),
+            resources.GetString("comboBoxMaxServer.Items5"),
+            resources.GetString("comboBoxMaxServer.Items6"),
+            resources.GetString("comboBoxMaxServer.Items7"),
+            resources.GetString("comboBoxMaxServer.Items8"),
+            resources.GetString("comboBoxMaxServer.Items9"),
+            resources.GetString("comboBoxMaxServer.Items10"),
+            resources.GetString("comboBoxMaxServer.Items11"),
+            resources.GetString("comboBoxMaxServer.Items12"),
+            resources.GetString("comboBoxMaxServer.Items13"),
+            resources.GetString("comboBoxMaxServer.Items14"),
+            resources.GetString("comboBoxMaxServer.Items15"),
+            resources.GetString("comboBoxMaxServer.Items16"),
+            resources.GetString("comboBoxMaxServer.Items17"),
+            resources.GetString("comboBoxMaxServer.Items18"),
+            resources.GetString("comboBoxMaxServer.Items19")});
             this.comboBoxMaxServer.Name = "comboBoxMaxServer";
-            this.comboBoxMaxServer.Size = new System.Drawing.Size(151, 20);
-            this.comboBoxMaxServer.TabIndex = 4;
             this.comboBoxMaxServer.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaxServer_SelectedIndexChanged);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Max Server:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 56);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 12);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Max Download:";
             // 
             // comboBoxMaxDownload
             // 
+            resources.ApplyResources(this.comboBoxMaxDownload, "comboBoxMaxDownload");
             this.comboBoxMaxDownload.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaxDownload.FormattingEnabled = true;
             this.comboBoxMaxDownload.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20"});
-            this.comboBoxMaxDownload.Location = new System.Drawing.Point(14, 71);
+            resources.GetString("comboBoxMaxDownload.Items"),
+            resources.GetString("comboBoxMaxDownload.Items1"),
+            resources.GetString("comboBoxMaxDownload.Items2"),
+            resources.GetString("comboBoxMaxDownload.Items3"),
+            resources.GetString("comboBoxMaxDownload.Items4"),
+            resources.GetString("comboBoxMaxDownload.Items5"),
+            resources.GetString("comboBoxMaxDownload.Items6"),
+            resources.GetString("comboBoxMaxDownload.Items7"),
+            resources.GetString("comboBoxMaxDownload.Items8"),
+            resources.GetString("comboBoxMaxDownload.Items9"),
+            resources.GetString("comboBoxMaxDownload.Items10"),
+            resources.GetString("comboBoxMaxDownload.Items11"),
+            resources.GetString("comboBoxMaxDownload.Items12"),
+            resources.GetString("comboBoxMaxDownload.Items13"),
+            resources.GetString("comboBoxMaxDownload.Items14"),
+            resources.GetString("comboBoxMaxDownload.Items15"),
+            resources.GetString("comboBoxMaxDownload.Items16"),
+            resources.GetString("comboBoxMaxDownload.Items17"),
+            resources.GetString("comboBoxMaxDownload.Items18"),
+            resources.GetString("comboBoxMaxDownload.Items19")});
             this.comboBoxMaxDownload.Name = "comboBoxMaxDownload";
-            this.comboBoxMaxDownload.Size = new System.Drawing.Size(151, 20);
-            this.comboBoxMaxDownload.TabIndex = 6;
             this.comboBoxMaxDownload.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaxDownload_SelectedIndexChanged);
+            // 
+            // checkBoxNotify
+            // 
+            resources.ApplyResources(this.checkBoxNotify, "checkBoxNotify");
+            this.checkBoxNotify.Name = "checkBoxNotify";
+            this.checkBoxNotify.UseVisualStyleBackColor = true;
+            this.checkBoxNotify.CheckedChanged += new System.EventHandler(this.checkBoxNotify_CheckedChanged);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::SteamDepotDownloader_GUI.Properties.Resources.Icon;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(179, 242);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.checkBoxNotify);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBoxMaxDownload);
             this.Controls.Add(this.label1);
@@ -178,7 +168,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Settings";
-            this.Text = "Settings";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +184,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxMaxDownload;
+        private System.Windows.Forms.CheckBox checkBoxNotify;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

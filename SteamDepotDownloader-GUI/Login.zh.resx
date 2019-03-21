@@ -117,72 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;buttonLogin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="comboBoxAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 20</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 16</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="comboBoxAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>账户名称:</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>236, 75</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 16</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>密码:</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 16</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>二步验证代码</value>
   </data>
-  <data name="buttonLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 16</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AutoLogin</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="comboBoxAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>(如果没有开启，请留空)</value>
   </data>
   <data name="buttonLogin.Text" xml:space="preserve">
-    <value>Login</value>
+    <value>登陆</value>
   </data>
-  <data name="&gt;&gt;buttonLogin.Name" xml:space="preserve">
-    <value>buttonLogin</value>
+  <data name="checkBoxRememberPass.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 16</value>
   </data>
-  <data name="buttonLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="checkBoxRememberPass.Text" xml:space="preserve">
+    <value>记住密码</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>AutoLogin</value>
+    <value>登陆</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Name" xml:space="preserve">
-    <value>comboBoxAccount</value>
-  </data>
-  <data name="buttonLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 25</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh</value>
-  </metadata>
 </root>

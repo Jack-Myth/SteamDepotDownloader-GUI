@@ -43,9 +43,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
-            this.progressBar1.Location = new System.Drawing.Point(-3, 15);
+            this.progressBar1.Location = new System.Drawing.Point(0, 15);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(198, 10);
+            this.progressBar1.Size = new System.Drawing.Size(195, 10);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             this.progressBar1.Value = 1;
@@ -78,9 +78,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDepotName.BackColor = System.Drawing.Color.Transparent;
             this.labelDepotName.ContextMenuStrip = this.contextMenuStrip1;
-            this.labelDepotName.Location = new System.Drawing.Point(-2, 0);
+            this.labelDepotName.Location = new System.Drawing.Point(0, 0);
             this.labelDepotName.Name = "labelDepotName";
-            this.labelDepotName.Size = new System.Drawing.Size(197, 12);
+            this.labelDepotName.Size = new System.Drawing.Size(195, 12);
             this.labelDepotName.TabIndex = 1;
             this.labelDepotName.Text = "DepotID:DepotName";
             // 

@@ -28,39 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutoLogin));
             this.comboBoxAccount = new System.Windows.Forms.ComboBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBoxAccount
             // 
+            resources.ApplyResources(this.comboBoxAccount, "comboBoxAccount");
             this.comboBoxAccount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAccount.FormattingEnabled = true;
-            this.comboBoxAccount.Location = new System.Drawing.Point(12, 12);
             this.comboBoxAccount.Name = "comboBoxAccount";
-            this.comboBoxAccount.Size = new System.Drawing.Size(212, 20);
-            this.comboBoxAccount.TabIndex = 0;
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(12, 38);
+            resources.ApplyResources(this.buttonLogin, "buttonLogin");
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(212, 25);
-            this.buttonLogin.TabIndex = 1;
-            this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // AutoLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(236, 75);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.comboBoxAccount);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AutoLogin";
-            this.Text = "AutoLogin";
             this.ResumeLayout(false);
 
         }

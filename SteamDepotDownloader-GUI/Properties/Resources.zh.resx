@@ -117,72 +117,71 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;buttonLogin.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="comboBoxAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 20</value>
+  <data name="Apps" xml:space="preserve">
+    <value>{0} Apps</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="comboBoxAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="UpdateAppListMsg" xml:space="preserve">
+    <value>正在更新App列表</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>236, 75</value>
+  <data name="DownloadingFileList" xml:space="preserve">
+    <value>正在下载文件列表...</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LogoutQuestion" xml:space="preserve">
+    <value>已登陆，你要注销吗？</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="DownloadSuccessful" xml:space="preserve">
+    <value>Depot {0} 下载成功！</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SameTask" xml:space="preserve">
+    <value>已有一个相同的任务了。</value>
   </data>
-  <data name="buttonLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
+  <data name="BetaPasswordRequest" xml:space="preserve">
+    <value>Depot需要密码</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="ChooseInstallDirectory" xml:space="preserve">
+    <value>选择安装位置</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AutoLogin</value>
+  <data name="AutoLoginFailed" xml:space="preserve">
+    <value>自动登陆失败，请用密码再试一次</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Steam登陆失败，请检查用户名和密码</value>
   </data>
-  <data name="comboBoxAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+  <data name="NoManifestID" xml:space="preserve">
+    <value>没有有效的 Manifest ID</value>
   </data>
-  <data name="&gt;&gt;buttonLogin.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="NoDepotKey" xml:space="preserve">
+    <value>没有有效的 depot 密钥.</value>
   </data>
-  <data name="buttonLogin.Text" xml:space="preserve">
-    <value>Login</value>
+  <data name="DownloadFailed" xml:space="preserve">
+    <value>Depot {0} 下载失败!</value>
   </data>
-  <data name="&gt;&gt;buttonLogin.Name" xml:space="preserve">
-    <value>buttonLogin</value>
+  <data name="SteamGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SteamGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="ClearFileListQuestion" xml:space="preserve">
+    <value>清除文件列表？</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AutoLogin</value>
+  <data name="FileListLoaded" xml:space="preserve">
+    <value>文件列表已加载</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Name" xml:space="preserve">
-    <value>comboBoxAccount</value>
+  <data name="ParamterError" xml:space="preserve">
+    <value>无效参数！</value>
   </data>
-  <data name="buttonLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 25</value>
+  <data name="CacheCleared" xml:space="preserve">
+    <value>缓存已清空</value>
   </data>
-  <data name="&gt;&gt;buttonLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="DepotNotListOrNotSupport" xml:space="preserve">
+    <value>Depot {0} 未在App {1} 中列出，或不支持该平台</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh</value>
-  </metadata>
+  <data name="NoAnyDepots" xml:space="preserve">
+    <value>在 {0} 找不到任何可下载的Depot</value>
+  </data>
+  <data name="NotAvailableForThisAccount" xml:space="preserve">
+    <value>App {0} ({1}) 在此账户上不可用.</value>
+  </data>
 </root>

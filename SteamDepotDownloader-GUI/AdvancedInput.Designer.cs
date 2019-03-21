@@ -69,7 +69,7 @@
             this.buttonDownload.Name = "buttonDownload";
             this.buttonDownload.Size = new System.Drawing.Size(396, 23);
             this.buttonDownload.TabIndex = 14;
-            this.buttonDownload.Text = "Create Download Task";
+            this.buttonDownload.Text = "创建下载任务";
             this.buttonDownload.UseVisualStyleBackColor = true;
             this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
             // 
@@ -119,7 +119,7 @@
             this.groupBox1.Size = new System.Drawing.Size(394, 201);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Optional Parameters";
+            this.groupBox1.Text = "可选参数";
             // 
             // button1
             // 
@@ -127,7 +127,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 23);
             this.button1.TabIndex = 10;
-            this.button1.Text = "File List File";
+            this.button1.Text = "文件列表文件";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
@@ -137,9 +137,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(127, 102);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 12);
+            this.label8.Size = new System.Drawing.Size(95, 12);
             this.label8.TabIndex = 21;
-            this.label8.Text = "Max Downloads:";
+            this.label8.Text = "同时文件下载数:";
             // 
             // textBoxMaxDownloads
             // 
@@ -153,9 +153,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 102);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 12);
+            this.label7.Size = new System.Drawing.Size(83, 12);
             this.label7.TabIndex = 19;
-            this.label7.Text = "Max Servers:";
+            this.label7.Text = "最大服务器数:";
             // 
             // textBoxMaxServers
             // 
@@ -214,12 +214,13 @@
             // 
             // checkBoxManifestOnly
             // 
+            this.checkBoxManifestOnly.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxManifestOnly.AutoSize = true;
-            this.checkBoxManifestOnly.Location = new System.Drawing.Point(219, 144);
+            this.checkBoxManifestOnly.Location = new System.Drawing.Point(280, 144);
             this.checkBoxManifestOnly.Name = "checkBoxManifestOnly";
-            this.checkBoxManifestOnly.Size = new System.Drawing.Size(156, 16);
+            this.checkBoxManifestOnly.Size = new System.Drawing.Size(108, 16);
             this.checkBoxManifestOnly.TabIndex = 12;
-            this.checkBoxManifestOnly.Text = "Download Manifest Only";
+            this.checkBoxManifestOnly.Text = "只下载Manifest";
             this.checkBoxManifestOnly.UseVisualStyleBackColor = true;
             // 
             // checkBoxAllPlatforms
@@ -227,13 +228,14 @@
             this.checkBoxAllPlatforms.AutoSize = true;
             this.checkBoxAllPlatforms.Location = new System.Drawing.Point(8, 144);
             this.checkBoxAllPlatforms.Name = "checkBoxAllPlatforms";
-            this.checkBoxAllPlatforms.Size = new System.Drawing.Size(156, 16);
+            this.checkBoxAllPlatforms.Size = new System.Drawing.Size(120, 16);
             this.checkBoxAllPlatforms.TabIndex = 11;
-            this.checkBoxAllPlatforms.Text = "Download All Platforms";
+            this.checkBoxAllPlatforms.Text = "下载所有平台内容";
             this.checkBoxAllPlatforms.UseVisualStyleBackColor = true;
             // 
             // comboBoxOS
             // 
+            this.comboBoxOS.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBoxOS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOS.FormattingEnabled = true;
             this.comboBoxOS.Items.AddRange(new object[] {
@@ -244,16 +246,15 @@
             this.comboBoxOS.Name = "comboBoxOS";
             this.comboBoxOS.Size = new System.Drawing.Size(121, 20);
             this.comboBoxOS.TabIndex = 4;
-            this.comboBoxOS.UseWaitCursor = true;
             // 
             // labelOS
             // 
             this.labelOS.AutoSize = true;
             this.labelOS.Location = new System.Drawing.Point(252, 18);
             this.labelOS.Name = "labelOS";
-            this.labelOS.Size = new System.Drawing.Size(23, 12);
+            this.labelOS.Size = new System.Drawing.Size(65, 12);
             this.labelOS.TabIndex = 8;
-            this.labelOS.Text = "OS:";
+            this.labelOS.Text = "操作系统：";
             // 
             // buttonInstallDir
             // 
@@ -263,7 +264,7 @@
             this.buttonInstallDir.Name = "buttonInstallDir";
             this.buttonInstallDir.Size = new System.Drawing.Size(382, 23);
             this.buttonInstallDir.TabIndex = 13;
-            this.buttonInstallDir.Text = "Choose Install Dir";
+            this.buttonInstallDir.Text = "选择安装目录";
             this.toolTip1.SetToolTip(this.buttonInstallDir, "./Download");
             this.buttonInstallDir.UseVisualStyleBackColor = true;
             this.buttonInstallDir.Click += new System.EventHandler(this.buttonInstallDir_Click);
@@ -316,9 +317,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(12, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 12);
+            this.label9.Size = new System.Drawing.Size(59, 12);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Download Name:";
+            this.label9.Text = "下载名称:";
             // 
             // AdvancedInput
             // 
@@ -335,7 +336,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdvancedInput";
-            this.Text = "Advanced Input";
+            this.Text = "高级输入";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

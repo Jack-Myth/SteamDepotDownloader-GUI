@@ -117,72 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;buttonLogin.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="labelName.Text" xml:space="preserve">
+    <value>点击Steam图标来登陆</value>
+  </data>
+  <data name="groupDepotInfo.Text" xml:space="preserve">
+    <value>Depot信息</value>
+  </data>
+  <data name="buttonDownload.Text" xml:space="preserve">
+    <value>下载Depot</value>
+  </data>
+  <data name="groupBoxDownloading.Text" xml:space="preserve">
+    <value>正在下载的Depot</value>
+  </data>
+  <data name="buttonSettings.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="buttonManuallyInput.Text" xml:space="preserve">
+    <value>高级输入</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="comboBoxAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 20</value>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 16</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="comboBoxAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>只下载选定文件</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>236, 75</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>下载设置</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 16</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="checkBox4.Text" xml:space="preserve">
+    <value>下载所有平台的文件</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 16</value>
   </data>
-  <data name="buttonLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>下载整个App</value>
   </data>
-  <data name="&gt;&gt;comboBoxAccount.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 16</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AutoLogin</value>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>只下载 Manifest</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>选择安装目录</value>
   </data>
-  <data name="comboBoxAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonLogin.Text" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Name" xml:space="preserve">
-    <value>buttonLogin</value>
-  </data>
-  <data name="buttonLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AutoLogin</value>
-  </data>
-  <data name="&gt;&gt;comboBoxAccount.Name" xml:space="preserve">
-    <value>comboBoxAccount</value>
-  </data>
-  <data name="buttonLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 25</value>
-  </data>
-  <data name="&gt;&gt;buttonLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh</value>
-  </metadata>
 </root>

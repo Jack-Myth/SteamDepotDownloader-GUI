@@ -36,13 +36,16 @@ namespace SteamDepotDownloader_GUI
             {
                 DownloadConfig Dc = new DownloadConfig();
                 Dc.AppID = Dr.AppID;
-                Dc.DepotID = Dr.DepotID;
+                Dc.ForceDepot = !Dr.NoForceDepot;
+                if (Dc.ForceDepot)
+                    Dc.DepotID = Dr.DepotID;
+                else
+                    Dc.DepotID = ContentDownloader.INVALID_DEPOT_ID;
                 Dc.Branch = Dr.BranchName;
                 Dc.DownloadManifestOnly = false;
                 Dc.FilesToDownload = Dr.FileToDownload;
                 Dc.UsingFileList = Dr.FileToDownload==null?false:true;
                 Dc.InstallDirectory = Dr.InstallDir;
-                Dc.ForceDepot = !Dr.NoForceDepot;
                 Dc.FilesToDownloadRegex = new List<System.Text.RegularExpressions.Regex>();
                 Dc.DownloadAllPlatforms = Dr.AllPlatforms;
                 if (Dr.FileRegex != null)
@@ -200,7 +203,7 @@ namespace SteamDepotDownloader_GUI
             Dr.BranchName = Dc.Branch;
             Dr.FileToDownload = AllowFileList;
             Dr.InstallDir = InstallDir;
-            Dr.NoForceDepot = this.checkBox3.Checked;
+            Dr.NoForceDepot = !Dc.ForceDepot;
             Dr.DownloadName = DownloadName;
             Dr.MaxDownload = Dc.MaxDownloads;
             Dr.MaxServer = Dc.MaxServers;
@@ -393,7 +396,7 @@ namespace SteamDepotDownloader_GUI
 
                 return retString;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //LoggerManagerSingle.Instance.Error("http get 网站出错", ex);
             }
@@ -447,6 +450,50 @@ namespace SteamDepotDownloader_GUI
         private void buttonManuallyInput_Click(object sender, EventArgs e)
         {
             new AdvancedInput().ShowDialog();
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            new Settings().ShowDialog();
+        }
+
+        private void SteamDepotDownloaderForm_Resize(object sender, EventArgs e)
+        {
+            if(WindowState==FormWindowState.Minimized)
+            {
+                if(ConfigStore.TheConfig.MinimizeToTray)
+                {
+                    this.notifyIcon1.Visible = true;
+                    Hide();
+                }
+            }
+            else
+            {
+                this.notifyIcon1.Visible = false;
+            }
+        }
+
+        private void SteamDepotDownloaderForm_SizeChanged(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                if (ConfigStore.TheConfig.MinimizeToTray)
+                {
+                    this.notifyIcon1.Visible = true;
+                    Hide();
+                }
+            }
+        }
+
+        private void SteamDepotDownloaderForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ContentDownloader.ShutdownSteam3();
+            Application.Exit();
+        }
+
+        private void buttonLog_Click(object sender, EventArgs e)
+        {
+            Program.LogForm.Show();
         }
     }
 }

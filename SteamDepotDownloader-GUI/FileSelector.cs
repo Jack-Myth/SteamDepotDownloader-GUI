@@ -129,6 +129,7 @@ namespace SteamDepotDownloader_GUI
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            Program.MainWindowForm.checkBox1.Checked = false;
             Close();
         }
 

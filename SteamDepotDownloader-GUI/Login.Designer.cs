@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxAccountName = new System.Windows.Forms.TextBox();
@@ -41,94 +42,56 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(34, 32);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Account Name:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(34, 95);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
             // 
             // textBoxAccountName
             // 
-            this.textBoxAccountName.Location = new System.Drawing.Point(37, 51);
+            resources.ApplyResources(this.textBoxAccountName, "textBoxAccountName");
             this.textBoxAccountName.Name = "textBoxAccountName";
-            this.textBoxAccountName.Size = new System.Drawing.Size(298, 21);
-            this.textBoxAccountName.TabIndex = 2;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(37, 114);
+            resources.ApplyResources(this.textBoxPassword, "textBoxPassword");
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(298, 21);
-            this.textBoxPassword.TabIndex = 3;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(36, 181);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Two Factor Auth Code:";
             // 
             // textBoxTwoFractorAuthCode
             // 
-            this.textBoxTwoFractorAuthCode.Font = new System.Drawing.Font("SimSun", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxTwoFractorAuthCode.Location = new System.Drawing.Point(126, 216);
+            resources.ApplyResources(this.textBoxTwoFractorAuthCode, "textBoxTwoFractorAuthCode");
             this.textBoxTwoFractorAuthCode.Name = "textBoxTwoFractorAuthCode";
-            this.textBoxTwoFractorAuthCode.Size = new System.Drawing.Size(112, 32);
-            this.textBoxTwoFractorAuthCode.TabIndex = 5;
-            this.textBoxTwoFractorAuthCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(36, 197);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(304, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "(Leave it empty if you don\'t need it)";
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Font = new System.Drawing.Font("SimSun", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonLogin.Location = new System.Drawing.Point(112, 269);
+            resources.ApplyResources(this.buttonLogin, "buttonLogin");
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(139, 57);
-            this.buttonLogin.TabIndex = 7;
-            this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // checkBoxRememberPass
             // 
-            this.checkBoxRememberPass.AutoSize = true;
-            this.checkBoxRememberPass.Location = new System.Drawing.Point(38, 150);
+            resources.ApplyResources(this.checkBoxRememberPass, "checkBoxRememberPass");
             this.checkBoxRememberPass.Name = "checkBoxRememberPass";
-            this.checkBoxRememberPass.Size = new System.Drawing.Size(126, 16);
-            this.checkBoxRememberPass.TabIndex = 8;
-            this.checkBoxRememberPass.Text = "Remember Password";
             this.checkBoxRememberPass.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 374);
             this.Controls.Add(this.checkBoxRememberPass);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.label4);
@@ -142,8 +105,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

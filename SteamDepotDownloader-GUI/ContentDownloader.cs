@@ -770,6 +770,13 @@ namespace DepotDownloader
                         try
                         {
                             await semaphore.WaitAsync(cts.Token).ConfigureAwait( false );
+
+                            //It may increase the stop speed?
+                            if (cts.IsCancellationRequested)
+                            {
+                                semaphore.Release();
+                                return;
+                            }
                             cts.Token.ThrowIfCancellationRequested();
 
                             string fileFinalPath = Path.Combine( depot.installDir, file.FileName );
@@ -875,7 +882,7 @@ namespace DepotDownloader
                                     float pcnts = ((float) size_downloaded / (float) complete_download_size);
                                     Config.FireReportProgressEvent(pcnts, fileName);
                                     //Config.FireReportProgressEvent($"Downloading -{pcnts,6:#00.00}% {fileName}");
-                                    Logger.Info( $"{pcnts,6:#00.00}% {fileName}");
+                                    Logger.Info( $"{pcnts*100,6:#00.00}% {fileName}");
                                     fs?.Dispose();
                                     return;
                                 }
@@ -972,14 +979,13 @@ namespace DepotDownloader
                             Config.FireReportProgressEvent(percents, filename);
                             //Config.FireReportProgressEvent($"Downloading -{percents,6:#00.00}% {filename}");
 
-                            Logger.Info( $"{percents,6:#00.00}% {filename}" );
+                            Logger.Info( $"{percents*100,6:#00.00}% {filename}" );
                         }
                         finally
                         {
                             semaphore.Release();
                         }
                     }, cts.Token);
-
                     tasks[ i ] = task;
                 }
 

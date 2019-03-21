@@ -697,9 +697,11 @@ namespace DepotDownloader
         {
             Logger.Info( "Accepted new login key for account {0}", logonDetails.Username );
 
-            ConfigStore.TheConfig.LoginKeys[ logonDetails.Username ] = loginKey.LoginKey;
-            ConfigStore.Save();
-
+            if (SteamDepotDownloader_GUI.Program.UsrConfig.RememberPassword)
+            {
+                ConfigStore.TheConfig.LoginKeys[logonDetails.Username] = loginKey.LoginKey;
+                ConfigStore.Save();
+            }
             steamUser.AcceptNewLoginKey( loginKey );
         }
 

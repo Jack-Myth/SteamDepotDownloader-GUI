@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Win32.Registry, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Registry.4.4.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
@@ -84,6 +87,12 @@
     <Compile Include="FileSelector.Designer.cs">
       <DependentUpon>FileSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,13 +129,29 @@
     <EmbeddedResource Include="AutoLogin.resx">
       <DependentUpon>AutoLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AutoLogin.zh.resx">
+      <DependentUpon>AutoLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FileSelector.resx">
       <DependentUpon>FileSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSelector.zh.resx">
+      <DependentUpon>FileSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.zh.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh.resx" />
     <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.zh.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SteamDepotDownloaderForm.resx">
@@ -142,6 +167,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SteamDepotDownloaderForm.zh.resx">
+      <DependentUpon>SteamDepotDownloaderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Waiting.resx">
       <DependentUpon>Waiting.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +202,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SteamGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

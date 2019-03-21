@@ -10,18 +10,21 @@ namespace DepotDownloader
         {
             //_Config.FireOnMessageEvent("log", Format(line, args));
             Console.WriteLine("Info:"+Format(line,args));
+            SteamDepotDownloader_GUI.Log.Logx("Info:" + Format(line, args));
         }
         
         public static void Warning(string line, params object[] args)
         {
             //_Config.FireOnMessageEvent("warning", Format(line, args));
             Console.WriteLine("Warning:" + Format(line, args));
+            SteamDepotDownloader_GUI.Log.Logx("Warning:" + Format(line, args));
         }
         
         public static void Error(string line, params object[] args)
         {
             //_Config.FireOnMessageEvent("error", Format(line, args));
             Console.WriteLine("Error:" + Format(line, args));
+            SteamDepotDownloader_GUI.Log.Logx("Error:" + Format(line, args));
         }
         
         public static void Exception(Exception exception)

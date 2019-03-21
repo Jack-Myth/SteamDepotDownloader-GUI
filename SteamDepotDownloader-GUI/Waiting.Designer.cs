@@ -54,7 +54,7 @@
             this.Name = "Waiting";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Please Wait...";
+            this.Text = "请稍候...";
             this.ResumeLayout(false);
 
         }

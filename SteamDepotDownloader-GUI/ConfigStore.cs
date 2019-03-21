@@ -58,6 +58,9 @@ namespace DepotDownloader
         [ProtoMember(8, IsRequired = false)]
         public int MaxDownload = 4;
 
+        [ProtoMember(9, IsRequired = false)]
+        public bool MinimizeToTray = false;
+
         string FileName = null;
 
         ConfigStore()

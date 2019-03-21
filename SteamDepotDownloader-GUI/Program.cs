@@ -17,6 +17,7 @@ namespace SteamDepotDownloader_GUI
 
         public static DepotDownloader.UserConfig UsrConfig;
         public static SteamDepotDownloaderForm MainWindowForm;
+        public static Log LogForm;
         public const string CacheDir = "./Cache";
 
         public static List<DepotDownloader.ContentDownloader> DownloaderInstances=new List<DepotDownloader.ContentDownloader>();
@@ -26,8 +27,10 @@ namespace SteamDepotDownloader_GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DepotDownloader.ConfigStore.LoadFromFile(Path.Combine(Directory.GetCurrentDirectory(), "DepotDownloader.config"));
+            LogForm = new Log();
             MainWindowForm = new SteamDepotDownloaderForm();
             Application.Run(MainWindowForm);
+            Application.Exit();
         }
     }
 }

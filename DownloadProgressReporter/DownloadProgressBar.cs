@@ -64,9 +64,17 @@ namespace SteamDepotDownloader_GUI
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             if (Downloading)
+            {
+                Downloading = false;
+                toolStripMenuItem1.Text = "Restart";
                 StopDownload.Invoke();
+            }
             else
+            {
+                Downloading = true;
+                toolStripMenuItem1.Text = "Stop";
                 RestartDownload.Invoke();
+            }
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)

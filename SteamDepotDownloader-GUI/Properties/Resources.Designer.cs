@@ -160,6 +160,16 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon {
+            get {
+                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Steam login failed!Try check your account and password..
         /// </summary>
         internal static string LoginFailed {
@@ -252,7 +262,7 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Updating App LIst....
+        ///   Looks up a localized string similar to Updating App List....
         /// </summary>
         internal static string UpdateAppListMsg {
             get {
