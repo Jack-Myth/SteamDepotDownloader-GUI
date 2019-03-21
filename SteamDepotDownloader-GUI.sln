@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamDepotDownloader-GUI", "SteamDepotDownloader-GUI\SteamDepotDownloader-GUI.csproj", "{0CC5B832-B605-463B-BD2C-521EDC7D9264}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadProgressReporter", "DownloadProgressReporter\DownloadProgressReporter.csproj", "{CD9F9441-933C-4FAE-8895-2099D3F96A9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CC5B832-B605-463B-BD2C-521EDC7D9264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC5B832-B605-463B-BD2C-521EDC7D9264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC5B832-B605-463B-BD2C-521EDC7D9264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC5B832-B605-463B-BD2C-521EDC7D9264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9F9441-933C-4FAE-8895-2099D3F96A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9F9441-933C-4FAE-8895-2099D3F96A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9F9441-933C-4FAE-8895-2099D3F96A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9F9441-933C-4FAE-8895-2099D3F96A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6564B4CE-FE0D-4A7F-B35F-071AF6569035}
+	EndGlobalSection
+EndGlobal
