@@ -196,7 +196,7 @@ namespace SteamDepotDownloader_GUI
 
         private ulong UpdateFileSize(TreeNode Tn)
         {
-            if (Tn.Nodes.Count == 0)
+            if (Tn.Nodes!=null&&Tn.Nodes.Count == 0)
             {
                 return Tn.Checked ? (ulong)Tn.Tag : 0;
             }
@@ -220,7 +220,7 @@ namespace SteamDepotDownloader_GUI
         private void setChildNodeCheckedState(TreeNode currNode, bool state)
         {
             TreeNodeCollection nodes = currNode.Nodes;
-            if (nodes.Count > 0)
+            if (nodes!=null&&nodes.Count > 0)
                 foreach (TreeNode tn in nodes)
                 {
                     tn.Checked = state;
@@ -249,20 +249,25 @@ namespace SteamDepotDownloader_GUI
                     setChildNodeCheckedState(e.Node, false);
                     updateParentNodeCheckedState(e.Node);
                 }
-                {
-                    //Update FileSize
-                    ulong TotalSize = 0;
-                    foreach (TreeNode Tn in this.treeViewFileList.Nodes)
-                        TotalSize = UpdateFileSize(Tn);
-                    this.labelSize.Text = string.Format("{0}{1}/{2}{1}", (TotalSize / SizeDivisor).ToString("#0.00"), UnitStr, (DepotMaxSize / SizeDivisor).ToString("#0.00"));
-                }
+            }
+            {
+                //Update FileSize
+                ulong TotalSize = 0;
+                foreach (TreeNode Tn in this.treeViewFileList.Nodes)
+                    TotalSize += UpdateFileSize(Tn);
+                this.labelSize.Text = string.Format("{0}{1}/{2}{1}", (TotalSize / SizeDivisor).ToString("#0.00"), UnitStr, (DepotMaxSize / SizeDivisor).ToString("#0.00"));
             }
         }
 
         private void checkSelectAll_CheckedChanged(object sender, EventArgs e)
         {
             foreach (TreeNode Tn in this.treeViewFileList.Nodes)
-                setChildNodeCheckedState(Tn, this.checkSelectAll.Checked);
+            {
+                if (Tn.Nodes != null && Tn.Nodes.Count > 0)
+                    setChildNodeCheckedState(Tn, this.checkSelectAll.Checked);
+                else
+                    Tn.Checked = this.checkSelectAll.Checked;
+            }
         }
     }
 }
