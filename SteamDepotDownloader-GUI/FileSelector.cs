@@ -14,7 +14,7 @@ namespace SteamDepotDownloader_GUI
     public partial class FileSelector : Form
     {
         public const string CachedDir = "./CachedDir";
-        ulong ManifestID;
+        ulong ManifestID = ContentDownloader.INVALID_MANIFEST_ID;
         uint AppID;
         uint DepotID;
         string Branch;
