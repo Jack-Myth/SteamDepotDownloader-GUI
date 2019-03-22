@@ -48,6 +48,16 @@ namespace SteamDepotDownloader_GUI
                 Dc.InstallDirectory = Dr.InstallDir;
                 Dc.FilesToDownloadRegex = new List<System.Text.RegularExpressions.Regex>();
                 Dc.DownloadAllPlatforms = Dr.AllPlatforms;
+                if(Dr.AdvancedConfig)
+                {
+                    Dc.MaxDownloads = Dr.MaxDownload;
+                    Dc.MaxServers = Dr.MaxServer;
+                }
+                else
+                {
+                    Dc.MaxDownloads = ConfigStore.TheConfig.MaxDownload;
+                    Dc.MaxServers = ConfigStore.TheConfig.MaxServer;
+                }
                 if (Dr.FileRegex != null)
                 {
                     foreach (string regex in Dr.FileRegex)
@@ -60,20 +70,7 @@ namespace SteamDepotDownloader_GUI
                         catch { };
                     }
                 }
-                DownloadProgressBar Dpb = new DownloadProgressBar();
-                Dc.OnReportProgressEvent += Dpb.OnDownloadProgress;
-                Dc.OnDownloadFinishedEvent += Dpb.OnDownloadFinished;
-                var TargetDownloader = new ContentDownloader();
-                Program.DownloaderInstances.Add(TargetDownloader);
-                Dpb.RestartDownload += TargetDownloader.RestartDownload;
-                Dpb.StopDownload += TargetDownloader.StopDownload;
-                Dpb.CancelDownload += this.CancelDownload;
-                Dpb.OnDownloadFinishedReport += this.OnDownloadFinished;
-                Dpb.Downloading = false;
-                Dpb.InitDownloading(Dr.DownloadName, Dr.AppID, Dr.DepotID, Dr.BranchName);
-                this.panelDownloading.Controls.Add(Dpb);
-                RegroupDownloadProgressControl();
-                TargetDownloader.Config = Dc;
+                CreateDownloadTask(Dr.DownloadName, Dc, Dr.AdvancedConfig,true);
             }
         }
 
@@ -149,16 +146,18 @@ namespace SteamDepotDownloader_GUI
             this.labelDepotID.Text = "DepotID:" + DepotID.ToString();
             this.labelAppName.Text = "AppName:"+ ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
             this.labelDepotName.Text = "DepotName:" + depotsValue["name"].AsString();
-            this.labelDepotSize.Text = "DepotMaxSize:";
-            float SizeInKB = long.Parse(depotsValue["maxsize"].AsString()) / 1024f;
-            if (SizeInKB < 1024)
-                this.labelDepotSize.Text += SizeInKB.ToString("#0.00") + "KB";
-            else if (SizeInKB / 1024 < 1024)
-                this.labelDepotSize.Text += (SizeInKB / 1024f).ToString("#0.00") + "MB";
-            else
-                this.labelDepotSize.Text += (SizeInKB / 1024f / 1024f).ToString("#0.00") + "GB";
             this.labelOS.Text = "OS:" + depotsValue[DepotID.ToString()]["config"]["oslist"].AsString();
-            
+            this.labelDepotSize.Text = "DepotMaxSize:";
+            try
+            {
+                float SizeInKB = long.Parse(depotsValue["maxsize"].AsString()) / 1024f;
+                if (SizeInKB < 1024)
+                    this.labelDepotSize.Text += SizeInKB.ToString("#0.00") + "KB";
+                else if (SizeInKB / 1024 < 1024)
+                    this.labelDepotSize.Text += (SizeInKB / 1024f).ToString("#0.00") + "MB";
+                else
+                    this.labelDepotSize.Text += (SizeInKB / 1024f / 1024f).ToString("#0.00") + "GB";
+            }catch { };
         }
 
         private void ClearDepotInfo()
@@ -183,11 +182,12 @@ namespace SteamDepotDownloader_GUI
             }
         }
 
-        public void CreateDownloadTask(string DownloadName,DownloadConfig Dc)
+        public void CreateDownloadTask(string DownloadName,DownloadConfig Dc,bool AdvancedConfig,bool IsRestore)
         {
             DownloadProgressBar Dpb = new DownloadProgressBar();
             Dc.OnReportProgressEvent += Dpb.OnDownloadProgress;
             Dc.OnDownloadFinishedEvent += Dpb.OnDownloadFinished;
+            Dc.OnStateChangedEvent += Dpb.OnStateChanged;
             var TargetDownloader = new ContentDownloader();
             Program.DownloaderInstances.Add(TargetDownloader);
             Dpb.RestartDownload += TargetDownloader.RestartDownload;
@@ -197,27 +197,34 @@ namespace SteamDepotDownloader_GUI
             Dpb.InitDownloading(DownloadName, Dc.AppID, Dc.DepotID, Dc.Branch);
             this.panelDownloading.Controls.Add(Dpb);
             RegroupDownloadProgressControl();
-            DownloadRecord Dr = new DownloadRecord();
-            Dr.AppID = Dc.AppID;
-            Dr.DepotID = Dc.DepotID;
-            Dr.BranchName = Dc.Branch;
-            Dr.FileToDownload = AllowFileList;
-            Dr.InstallDir = InstallDir;
-            Dr.NoForceDepot = !Dc.ForceDepot;
-            Dr.DownloadName = DownloadName;
-            Dr.MaxDownload = Dc.MaxDownloads;
-            Dr.MaxServer = Dc.MaxServers;
-            Dr.AllPlatforms = Dc.DownloadAllPlatforms;
-            if(Dc.FilesToDownloadRegex!=null)
+            if (!IsRestore)
             {
-                Dr.FileRegex = new List<string>();
-                foreach (System.Text.RegularExpressions.Regex Fileregex in Dc.FilesToDownloadRegex)
-                    Dr.FileRegex.Add(Fileregex.ToString());
+                DownloadRecord Dr = new DownloadRecord();
+                Dr.AppID = Dc.AppID;
+                Dr.DepotID = Dc.DepotID;
+                Dr.BranchName = Dc.Branch;
+                Dr.FileToDownload = AllowFileList;
+                Dr.InstallDir = InstallDir;
+                Dr.NoForceDepot = !Dc.ForceDepot;
+                Dr.DownloadName = DownloadName;
+                Dr.MaxDownload = Dc.MaxDownloads;
+                Dr.MaxServer = Dc.MaxServers;
+                Dr.AllPlatforms = Dc.DownloadAllPlatforms;
+                Dr.AdvancedConfig = AdvancedConfig;
+                if (Dc.FilesToDownloadRegex != null)
+                {
+                    Dr.FileRegex = new List<string>();
+                    foreach (System.Text.RegularExpressions.Regex Fileregex in Dc.FilesToDownloadRegex)
+                        Dr.FileRegex.Add(Fileregex.ToString());
+                }
+                ConfigStore.TheConfig.DownloadRecord.Add(Dr);
+                ConfigStore.Save();
             }
-            ConfigStore.TheConfig.DownloadRecord.Add(Dr);
-            ConfigStore.Save();
             TargetDownloader.Config = Dc;
-            TargetDownloader.RestartDownload();
+            if (!IsRestore)
+                TargetDownloader.RestartDownload();
+            else
+                Dpb.Downloading = false;
         }
 
         private void buttonDownload_Click(object sender, EventArgs e)
@@ -261,7 +268,7 @@ namespace SteamDepotDownloader_GUI
                 DownloadName = depotsValue["name"].AsString();
             else
                 DownloadName = ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
-            CreateDownloadTask(DownloadName,Dc);
+            CreateDownloadTask(DownloadName,Dc,false,false);
         }
 
         public void UpdateBetaPasswordRecord(uint AppID,uint DepotID,string Branch,string BetaPassword)
@@ -343,7 +350,7 @@ namespace SteamDepotDownloader_GUI
             {
                 var Dpb = ((DownloadProgressBar)panelDownloading.Controls[i]);
                 Dpb.Location = new Point(3, 3 + i * (Dpb.Height + 5));
-                Dpb.Size = new Size(198, 25);
+                //Dpb.Size = new Size(198, 25);
                 Dpb.Show();
             }
         }
@@ -494,6 +501,13 @@ namespace SteamDepotDownloader_GUI
         private void buttonLog_Click(object sender, EventArgs e)
         {
             Program.LogForm.Show();
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            this.notifyIcon1.Visible = false;
         }
     }
 }

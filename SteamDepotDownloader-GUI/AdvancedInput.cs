@@ -111,7 +111,7 @@ namespace SteamDepotDownloader_GUI
                 Dc.MaxServers = LoadParamter(this.textBoxMaxDownloads.Text, Dc.MaxServers);
                 Dc.DownloadAllPlatforms = this.checkBoxAllPlatforms.Checked;
                 Dc.DownloadManifestOnly = this.checkBoxManifestOnly.Checked;
-                Program.MainWindowForm.CreateDownloadTask(this.textBoxDownloadName.Text,Dc);
+                Program.MainWindowForm.CreateDownloadTask(this.textBoxDownloadName.Text,Dc,true,false);
                 Close();
             }
             catch

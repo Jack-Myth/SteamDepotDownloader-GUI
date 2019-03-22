@@ -34,6 +34,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelDepotName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
-            this.progressBar1.Location = new System.Drawing.Point(0, 15);
+            this.progressBar1.Location = new System.Drawing.Point(0, 32);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(195, 10);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -83,18 +84,29 @@
             this.labelDepotName.Size = new System.Drawing.Size(195, 12);
             this.labelDepotName.TabIndex = 1;
             this.labelDepotName.Text = "DepotID:DepotName";
+            this.labelDepotName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 12);
+            this.label1.TabIndex = 2;
             // 
             // DownloadProgressBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.labelDepotName);
             this.Name = "DownloadProgressBar";
-            this.Size = new System.Drawing.Size(198, 25);
+            this.Size = new System.Drawing.Size(198, 42);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -105,5 +117,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.Label label1;
     }
 }

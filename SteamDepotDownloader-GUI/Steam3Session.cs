@@ -59,7 +59,7 @@ namespace DepotDownloader
         // output
         Credentials credentials;
 
-        static readonly TimeSpan STEAM3_TIMEOUT = TimeSpan.FromSeconds( 30 );
+        static readonly TimeSpan STEAM3_TIMEOUT = TimeSpan.FromSeconds( 10 );
 
 
         public Steam3Session( SteamUser.LogOnDetails details )
@@ -484,11 +484,13 @@ namespace DepotDownloader
         {
             if ( logonDetails.Username == null || !SteamDepotDownloader_GUI.Program.UsrConfig.RememberPassword ) return;
 
-            DateTime waitUntil = new DateTime().AddSeconds( 10 );
+            DateTime waitUntil = DateTime.Now.AddSeconds( 5 );
+
+
 
             while ( true )
             {
-                DateTime now = new DateTime();
+                DateTime now = DateTime.Now;
                 if ( now >= waitUntil ) break;
 
                 if ( ConfigStore.TheConfig.LoginKeys.ContainsKey( logonDetails.Username ) ) break;

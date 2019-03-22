@@ -33,6 +33,8 @@ namespace DepotDownloader
         public int MaxDownload;
         [ProtoMember(12, IsRequired = false)]
         public bool AllPlatforms;
+        [ProtoMember(13, IsRequired = false)]
+        public bool AdvancedConfig;
     }
 
     [ProtoContract]

@@ -36,6 +36,8 @@ namespace DepotDownloader
         /// </summary>
         public event Action<float,string> OnReportProgressEvent;
 
+        public event Action<bool> OnStateChangedEvent;
+
         public event Action<bool,string> OnDownloadFinishedEvent;
 
         /// <summary>
@@ -53,6 +55,11 @@ namespace DepotDownloader
         internal void FireReportProgressEvent(float Percent,string CurrentFileName)
         {
             OnReportProgressEvent?.Invoke(Percent,CurrentFileName);
+        }
+
+        internal void FireOnStateChangedEvent(bool IsDownloading)
+        {
+            OnStateChangedEvent?.Invoke(IsDownloading);
         }
 
         internal void FireOnDownloadFinishedEvent(bool IsSuccessful, string ErrorMsg)

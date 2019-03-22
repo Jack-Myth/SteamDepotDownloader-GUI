@@ -41,6 +41,7 @@ namespace SteamDepotDownloader_GUI
                 MessageBox.Show(Properties.Resources.NoManifestID, "FileSelector", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            System.IO.Directory.CreateDirectory(Program.CacheDir);
             var localProtoManifest = DepotDownloader.ProtoManifest.LoadFromFile(string.Format("{0}/{1}.bin",Program.CacheDir, ManifestID));
             if (localProtoManifest!=null)
             {
@@ -54,9 +55,9 @@ namespace SteamDepotDownloader_GUI
                 if(!ContentDownloader.steam3.DepotKeys.ContainsKey(DepotID))
                 {
                     MessageBox.Show(Properties.Resources.NoDepotKey, "FileSelector",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                    return;
+                    //return;
                     //User may still need to use FileRegex
-                    //Close();
+                    Close();
                 }
                 byte[] depotKey = ContentDownloader.steam3.DepotKeys[DepotID];
                 //ContentDownloader.steam3.RequestAppTicket(AppID);
@@ -124,6 +125,7 @@ namespace SteamDepotDownloader_GUI
                     SizeDivisor = 1024 * 1024 * 1024f;
                     UnitStr = "GB";
                 }
+                this.labelSize.Text = string.Format("{0}{1}/{2}{1}", 0.ToString("#0.00"), UnitStr, (DepotMaxSize / SizeDivisor).ToString("#0.00"));
             }
         }
 
@@ -138,7 +140,8 @@ namespace SteamDepotDownloader_GUI
             if(Tn.Nodes.Count==0)
             {
                 //This is a file.
-                Program.MainWindowForm.AllowFileList.Add(Tn.FullPath);
+                if(Tn.Checked)
+                    Program.MainWindowForm.AllowFileList.Add(Tn.FullPath);
             }
             else
             {
@@ -195,7 +198,7 @@ namespace SteamDepotDownloader_GUI
         {
             if (Tn.Nodes.Count == 0)
             {
-                return (ulong)Tn.Tag;
+                return Tn.Checked ? (ulong)Tn.Tag : 0;
             }
             else
             {

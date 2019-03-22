@@ -20,7 +20,7 @@ namespace SteamDepotDownloader_GUI
         string Branch;
         public bool Downloading = true;
         public bool IsDownloadFinished { get; private set; }
-        public delegate void OnDownloadProgressDelegate(float Percent);
+        public delegate void OnDownloadProgressDelegate(float Percent, string Filename);
         OnDownloadProgressDelegate OdPDelegate;
         public delegate void OnDownloadFinishedDelegate(bool IsSuccessful, string ErrorMsg);
         OnDownloadFinishedDelegate OdFDelegate;
@@ -46,14 +46,14 @@ namespace SteamDepotDownloader_GUI
                 this.toolStripMenuItem1.Text = "Restart";
         }
 
-        public void OnDownloadProgressView(float Percent)
+        public void OnDownloadProgressView(float Percent, string Filename)
         {
             this.progressBar1.Value = (int)(Percent * 100);
-            this.progressBar1.Refresh();
+            this.label1.Text = string.Format("{0}%:{1}", (Percent*100).ToString("#00.00"), Filename);
         }
         public void OnDownloadProgress(float Percent,string Filename)
         {
-            this.Invoke(OdPDelegate, Percent);
+            this.Invoke(OdPDelegate, Percent,Filename);
         }
 
         public void OnDownloadFinished(bool IsSuccessful,string ErrorMsg)
@@ -65,16 +65,15 @@ namespace SteamDepotDownloader_GUI
         {
             if (Downloading)
             {
-                Downloading = false;
                 toolStripMenuItem1.Text = "Restart";
                 StopDownload.Invoke();
             }
             else
             {
-                Downloading = true;
                 toolStripMenuItem1.Text = "Stop";
                 RestartDownload.Invoke();
             }
+            toolStripMenuItem1.Enabled = false;
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
@@ -88,5 +87,10 @@ namespace SteamDepotDownloader_GUI
             OnDownloadFinishedReport.Invoke(this.labelDepotName.Text, AppId, DepotId, Branch, IsSuccessful, ErrorMsg);
         }
 
+        public void OnStateChanged(bool mIsDownloading)
+        {
+            Downloading = mIsDownloading;
+            toolStripMenuItem1.Enabled = true;
+        }
     }
 }
