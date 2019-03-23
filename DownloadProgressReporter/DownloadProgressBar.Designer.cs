@@ -46,7 +46,7 @@
             this.progressBar1.ContextMenuStrip = this.contextMenuStrip1;
             this.progressBar1.Location = new System.Drawing.Point(0, 32);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(195, 10);
+            this.progressBar1.Size = new System.Drawing.Size(198, 10);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 0;
             this.progressBar1.Value = 1;

@@ -62,9 +62,9 @@
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
             this.textBoxAppSearch = new System.Windows.Forms.TextBox();
             this.pictureAvatar = new System.Windows.Forms.PictureBox();
+            this.buttonLog = new System.Windows.Forms.Button();
             this.folderBrowserDialogMain = new System.Windows.Forms.FolderBrowserDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.buttonLog = new System.Windows.Forms.Button();
             this.groupDepotInfo.SuspendLayout();
             this.groupBoxDownloading.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,49 +73,42 @@
             // 
             // appList
             // 
-            resources.ApplyResources(this.appList, "appList");
             this.appList.FormattingEnabled = true;
+            resources.ApplyResources(this.appList, "appList");
             this.appList.Name = "appList";
-            this.toolTipMain.SetToolTip(this.appList, resources.GetString("appList.ToolTip"));
             this.appList.SelectedIndexChanged += new System.EventHandler(this.appList_SelectedIndexChanged);
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.toolTipMain.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.toolTipMain.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // labelName
             // 
             resources.ApplyResources(this.labelName, "labelName");
             this.labelName.Name = "labelName";
-            this.toolTipMain.SetToolTip(this.labelName, resources.GetString("labelName.ToolTip"));
             // 
             // labelGameCount
             // 
             resources.ApplyResources(this.labelGameCount, "labelGameCount");
             this.labelGameCount.Name = "labelGameCount";
-            this.toolTipMain.SetToolTip(this.labelGameCount, resources.GetString("labelGameCount.ToolTip"));
             // 
             // listDepots
             // 
-            resources.ApplyResources(this.listDepots, "listDepots");
             this.listDepots.FormattingEnabled = true;
+            resources.ApplyResources(this.listDepots, "listDepots");
             this.listDepots.Name = "listDepots";
-            this.toolTipMain.SetToolTip(this.listDepots, resources.GetString("listDepots.ToolTip"));
             this.listDepots.SelectedIndexChanged += new System.EventHandler(this.listDepots_SelectedIndexChanged);
             // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.toolTipMain.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // groupDepotInfo
             // 
@@ -128,69 +121,58 @@
             this.groupDepotInfo.Controls.Add(this.labelDepotID);
             this.groupDepotInfo.Name = "groupDepotInfo";
             this.groupDepotInfo.TabStop = false;
-            this.toolTipMain.SetToolTip(this.groupDepotInfo, resources.GetString("groupDepotInfo.ToolTip"));
             // 
             // labelOS
             // 
             resources.ApplyResources(this.labelOS, "labelOS");
             this.labelOS.Name = "labelOS";
-            this.toolTipMain.SetToolTip(this.labelOS, resources.GetString("labelOS.ToolTip"));
             // 
             // labelDepotSize
             // 
             resources.ApplyResources(this.labelDepotSize, "labelDepotSize");
             this.labelDepotSize.Name = "labelDepotSize";
-            this.toolTipMain.SetToolTip(this.labelDepotSize, resources.GetString("labelDepotSize.ToolTip"));
             // 
             // labelAppName
             // 
             resources.ApplyResources(this.labelAppName, "labelAppName");
             this.labelAppName.Name = "labelAppName";
-            this.toolTipMain.SetToolTip(this.labelAppName, resources.GetString("labelAppName.ToolTip"));
             // 
             // labelDepotName
             // 
             resources.ApplyResources(this.labelDepotName, "labelDepotName");
             this.labelDepotName.Name = "labelDepotName";
-            this.toolTipMain.SetToolTip(this.labelDepotName, resources.GetString("labelDepotName.ToolTip"));
             // 
             // labelAppID
             // 
             resources.ApplyResources(this.labelAppID, "labelAppID");
             this.labelAppID.Name = "labelAppID";
-            this.toolTipMain.SetToolTip(this.labelAppID, resources.GetString("labelAppID.ToolTip"));
             // 
             // labelDepotID
             // 
             resources.ApplyResources(this.labelDepotID, "labelDepotID");
             this.labelDepotID.Name = "labelDepotID";
-            this.toolTipMain.SetToolTip(this.labelDepotID, resources.GetString("labelDepotID.ToolTip"));
             // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.toolTipMain.SetToolTip(this.label5, resources.GetString("label5.ToolTip"));
             // 
             // comboBranches
             // 
-            resources.ApplyResources(this.comboBranches, "comboBranches");
             this.comboBranches.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBranches.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBranches, "comboBranches");
             this.comboBranches.Name = "comboBranches";
-            this.toolTipMain.SetToolTip(this.comboBranches, resources.GetString("comboBranches.ToolTip"));
             // 
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.toolTipMain.SetToolTip(this.label6, resources.GetString("label6.ToolTip"));
             // 
             // buttonDownload
             // 
             resources.ApplyResources(this.buttonDownload, "buttonDownload");
             this.buttonDownload.Name = "buttonDownload";
-            this.toolTipMain.SetToolTip(this.buttonDownload, resources.GetString("buttonDownload.ToolTip"));
             this.buttonDownload.UseVisualStyleBackColor = true;
             this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
             // 
@@ -198,7 +180,6 @@
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.toolTipMain.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
             // 
             // groupBoxDownloading
             // 
@@ -206,19 +187,16 @@
             this.groupBoxDownloading.Controls.Add(this.panelDownloading);
             this.groupBoxDownloading.Name = "groupBoxDownloading";
             this.groupBoxDownloading.TabStop = false;
-            this.toolTipMain.SetToolTip(this.groupBoxDownloading, resources.GetString("groupBoxDownloading.ToolTip"));
             // 
             // panelDownloading
             // 
             resources.ApplyResources(this.panelDownloading, "panelDownloading");
             this.panelDownloading.Name = "panelDownloading";
-            this.toolTipMain.SetToolTip(this.panelDownloading, resources.GetString("panelDownloading.ToolTip"));
             // 
             // buttonSettings
             // 
             resources.ApplyResources(this.buttonSettings, "buttonSettings");
             this.buttonSettings.Name = "buttonSettings";
-            this.toolTipMain.SetToolTip(this.buttonSettings, resources.GetString("buttonSettings.ToolTip"));
             this.buttonSettings.UseVisualStyleBackColor = true;
             this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
@@ -226,7 +204,6 @@
             // 
             resources.ApplyResources(this.buttonManuallyInput, "buttonManuallyInput");
             this.buttonManuallyInput.Name = "buttonManuallyInput";
-            this.toolTipMain.SetToolTip(this.buttonManuallyInput, resources.GetString("buttonManuallyInput.ToolTip"));
             this.buttonManuallyInput.UseVisualStyleBackColor = true;
             this.buttonManuallyInput.Click += new System.EventHandler(this.buttonManuallyInput_Click);
             // 
@@ -234,21 +211,19 @@
             // 
             resources.ApplyResources(this.checkBox1, "checkBox1");
             this.checkBox1.Name = "checkBox1";
-            this.toolTipMain.SetToolTip(this.checkBox1, resources.GetString("checkBox1.ToolTip"));
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.checkBox4);
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.checkBox1);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
-            this.toolTipMain.SetToolTip(this.groupBox2, resources.GetString("groupBox2.ToolTip"));
             // 
             // checkBox4
             // 
@@ -268,7 +243,6 @@
             // 
             resources.ApplyResources(this.checkBox2, "checkBox2");
             this.checkBox2.Name = "checkBox2";
-            this.toolTipMain.SetToolTip(this.checkBox2, resources.GetString("checkBox2.ToolTip"));
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -289,7 +263,6 @@
             // 
             resources.ApplyResources(this.textBoxAppSearch, "textBoxAppSearch");
             this.textBoxAppSearch.Name = "textBoxAppSearch";
-            this.toolTipMain.SetToolTip(this.textBoxAppSearch, resources.GetString("textBoxAppSearch.ToolTip"));
             this.textBoxAppSearch.TextChanged += new System.EventHandler(this.textBoxAppSearch_TextChanged);
             // 
             // pictureAvatar
@@ -298,25 +271,19 @@
             this.pictureAvatar.Image = global::SteamDepotDownloader_GUI.Properties.Resources.SteamGray;
             this.pictureAvatar.Name = "pictureAvatar";
             this.pictureAvatar.TabStop = false;
-            this.toolTipMain.SetToolTip(this.pictureAvatar, resources.GetString("pictureAvatar.ToolTip"));
             this.pictureAvatar.Click += new System.EventHandler(this.pictureAvatar_Click);
-            // 
-            // folderBrowserDialogMain
-            // 
-            resources.ApplyResources(this.folderBrowserDialogMain, "folderBrowserDialogMain");
-            // 
-            // notifyIcon1
-            // 
-            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // buttonLog
             // 
             resources.ApplyResources(this.buttonLog, "buttonLog");
             this.buttonLog.Name = "buttonLog";
-            this.toolTipMain.SetToolTip(this.buttonLog, resources.GetString("buttonLog.ToolTip"));
             this.buttonLog.UseVisualStyleBackColor = true;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
+            // 
+            // notifyIcon1
+            // 
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // SteamDepotDownloaderForm
             // 
@@ -345,7 +312,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "SteamDepotDownloaderForm";
-            this.toolTipMain.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SteamDepotDownloaderForm_FormClosed);
             this.Load += new System.EventHandler(this.SteamDepotDownloaderForm_Load);
             this.SizeChanged += new System.EventHandler(this.SteamDepotDownloaderForm_SizeChanged);

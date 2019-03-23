@@ -34,6 +34,8 @@ namespace DepotDownloader
         [ProtoMember(12, IsRequired = false)]
         public bool AllPlatforms;
         [ProtoMember(13, IsRequired = false)]
+        public ulong ManifestID;
+        [ProtoMember(14, IsRequired = false)]
         public bool AdvancedConfig;
     }
 

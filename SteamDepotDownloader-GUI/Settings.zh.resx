@@ -128,7 +128,7 @@
     <value>12, 319</value>
   </data>
   <data name="button2.Text" xml:space="preserve">
-    <value>查看新版本</value>
+    <value>查看最新版本</value>
   </data>
   <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 303</value>

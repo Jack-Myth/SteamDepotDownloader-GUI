@@ -72,6 +72,7 @@ namespace SteamDepotDownloader_GUI
             {
                 toolStripMenuItem1.Text = "Stop";
                 RestartDownload.Invoke();
+                this.label1.Text = "Stopping...";
             }
             toolStripMenuItem1.Enabled = false;
         }
@@ -91,6 +92,10 @@ namespace SteamDepotDownloader_GUI
         {
             Downloading = mIsDownloading;
             toolStripMenuItem1.Enabled = true;
+            if (mIsDownloading)
+                this.label1.Text = "Download Started.";
+            else
+                this.label1.Text = "Download Stopped.";
         }
     }
 }

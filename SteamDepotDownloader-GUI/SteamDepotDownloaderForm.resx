@@ -118,440 +118,905 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="appList.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="appList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 60</value>
+  </data>
+  <data name="appList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 316</value>
+  </data>
   <data name="appList.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;buttonManuallyInput.Name" xml:space="preserve">
-    <value>buttonManuallyInput</value>
-  </data>
-  <data name="button1.ToolTip" xml:space="preserve">
-    <value>./Download</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="buttonDownload.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>↓</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelAppName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 16</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;labelOS.Parent" xml:space="preserve">
-    <value>groupDepotInfo</value>
-  </data>
-  <data name="&gt;&gt;comboBranches.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="buttonDownload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 23</value>
-  </data>
-  <data name="groupDepotInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 392</value>
-  </data>
-  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;buttonLog.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBoxDownloading.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBoxDownloading.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 264</value>
-  </data>
-  <data name="labelName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 16pt</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="pictureAvatar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 9</value>
-  </data>
-  <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 84</value>
-  </data>
-  <data name="labelName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;labelGameCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelDownloading.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelDepotSize.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;groupDepotInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonManuallyInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 69</value>
-  </data>
-  <data name="listDepots.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelGameCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;labelName.Name" xml:space="preserve">
-    <value>labelName</value>
-  </data>
-  <data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 9</value>
-  </data>
-  <data name="labelDepotName.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;labelName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 29</value>
-  </data>
-  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 42</value>
-  </data>
-  <data name="&gt;&gt;folderBrowserDialogMain.Name" xml:space="preserve">
-    <value>folderBrowserDialogMain</value>
-  </data>
-  <data name="groupDepotInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>464, 210</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 13</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 142</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;appList.Name" xml:space="preserve">
+    <value>appList</value>
   </data>
   <data name="&gt;&gt;appList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelDepotSize.Text" xml:space="preserve">
-    <value>DepotMaxSize:</value>
-  </data>
-  <data name="&gt;&gt;labelOS.Name" xml:space="preserve">
-    <value>labelOS</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>SteamDepotDownloader-GUI By JackMyth</value>
-  </data>
-  <data name="&gt;&gt;buttonSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="labelOS.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="checkBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;checkBox4.Name" xml:space="preserve">
-    <value>checkBox4</value>
-  </data>
-  <data name="labelGameCount.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAppID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 54</value>
-  </data>
-  <data name="listDepots.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="listDepots.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;appList.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;appList.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelDepotID.Text" xml:space="preserve">
-    <value>DepotID:</value>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 38</value>
   </data>
-  <data name="panelDownloading.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 12</value>
   </data>
-  <data name="&gt;&gt;labelDepotName.Name" xml:space="preserve">
-    <value>labelDepotName</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
-  </data>
-  <data name="&gt;&gt;pictureAvatar.ZOrder" xml:space="preserve">
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Apps:</value>
   </data>
-  <data name="textBoxAppSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 21</value>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
   </data>
-  <data name="&gt;&gt;listDepots.Name" xml:space="preserve">
-    <value>listDepots</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
-  </data>
-  <data name="textBoxAppSearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAppName.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="&gt;&gt;labelDepotSize.Name" xml:space="preserve">
-    <value>labelDepotSize</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
-    <value>notifyIcon1</value>
-  </data>
-  <data name="labelDepotSize.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureAvatar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 204</value>
-  </data>
-  <data name="&gt;&gt;labelDepotID.Type" xml:space="preserve">
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLog.Name" xml:space="preserve">
-    <value>buttonLog</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listDepots.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listDepots.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 84</value>
-  </data>
-  <data name="buttonDownload.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;comboBranches.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureAvatar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelOS.Text" xml:space="preserve">
-    <value>OS:</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 23</value>
-  </data>
-  <data name="&gt;&gt;buttonDownload.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelDepotSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 16</value>
-  </data>
-  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="pictureAvatar.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;textBoxAppSearch.Name" xml:space="preserve">
-    <value>textBoxAppSearch</value>
-  </data>
-  <data name="&gt;&gt;pictureAvatar.Name" xml:space="preserve">
-    <value>pictureAvatar</value>
-  </data>
-  <data name="groupBoxDownloading.Text" xml:space="preserve">
-    <value>DownloadingDepot</value>
-  </data>
-  <data name="buttonLog.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="&gt;&gt;labelName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSettings.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 204</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>→</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labelName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 16pt</value>
+  </data>
+  <data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 9</value>
+  </data>
+  <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 29</value>
+  </data>
+  <data name="labelName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelName.Text" xml:space="preserve">
+    <value>Click Steam icon to login</value>
+  </data>
+  <data name="labelName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;labelName.Name" xml:space="preserve">
+    <value>labelName</value>
+  </data>
+  <data name="&gt;&gt;labelName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labelGameCount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="labelGameCount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="labelGameCount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 38</value>
+  </data>
+  <data name="labelGameCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 26</value>
+  </data>
+  <data name="labelGameCount.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelGameCount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;labelGameCount.Name" xml:space="preserve">
+    <value>labelGameCount</value>
+  </data>
+  <data name="&gt;&gt;labelGameCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGameCount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelGameCount.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="listDepots.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="listDepots.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 84</value>
+  </data>
+  <data name="listDepots.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 292</value>
+  </data>
+  <data name="listDepots.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;listDepots.Name" xml:space="preserve">
+    <value>listDepots</value>
+  </data>
+  <data name="&gt;&gt;listDepots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listDepots.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listDepots.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 69</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 12</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Depots:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupDepotInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="labelOS.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelOS.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="labelOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 173</value>
+  </data>
+  <data name="labelOS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 16</value>
+  </data>
+  <data name="labelOS.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelOS.Text" xml:space="preserve">
+    <value>OS:</value>
+  </data>
+  <data name="&gt;&gt;labelOS.Name" xml:space="preserve">
+    <value>labelOS</value>
+  </data>
+  <data name="&gt;&gt;labelOS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelOS.Parent" xml:space="preserve">
+    <value>groupDepotInfo</value>
+  </data>
   <data name="&gt;&gt;labelOS.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;groupDepotInfo.Name" xml:space="preserve">
-    <value>groupDepotInfo</value>
+  <data name="labelDepotSize.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;labelDepotName.Parent" xml:space="preserve">
+  <data name="labelDepotSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="labelDepotSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 143</value>
+  </data>
+  <data name="labelDepotSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 16</value>
+  </data>
+  <data name="labelDepotSize.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="labelDepotSize.Text" xml:space="preserve">
+    <value>DepotMaxSize:</value>
+  </data>
+  <data name="&gt;&gt;labelDepotSize.Name" xml:space="preserve">
+    <value>labelDepotSize</value>
+  </data>
+  <data name="&gt;&gt;labelDepotSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDepotSize.Parent" xml:space="preserve">
     <value>groupDepotInfo</value>
   </data>
   <data name="&gt;&gt;labelDepotSize.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="buttonManuallyInput.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+  <data name="labelAppName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;folderBrowserDialogMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelGameCount.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="labelAppName.Font" type="System.Drawing.Font, System.Drawing">
     <value>SimSun, 12pt</value>
   </data>
-  <data name="&gt;&gt;groupDepotInfo.ZOrder" xml:space="preserve">
+  <data name="labelAppName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 112</value>
+  </data>
+  <data name="labelAppName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 16</value>
+  </data>
+  <data name="labelAppName.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="buttonLog.Text" xml:space="preserve">
-    <value>Log</value>
+  <data name="labelAppName.Text" xml:space="preserve">
+    <value>AppName:</value>
   </data>
-  <data name="label6.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;labelAppName.Name" xml:space="preserve">
+    <value>labelAppName</value>
   </data>
-  <data name="labelOS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 173</value>
-  </data>
-  <data name="&gt;&gt;comboBranches.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="pictureAvatar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="appList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 316</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="checkBox3.ToolTip" xml:space="preserve">
-    <value>Ignore what you select in Depots</value>
-  </data>
-  <data name="labelName.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="listDepots.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 292</value>
-  </data>
-  <data name="labelOS.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="groupDepotInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;labelDepotSize.Type" xml:space="preserve">
+  <data name="&gt;&gt;labelAppName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="comboBranches.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 20</value>
+  <data name="&gt;&gt;labelAppName.Parent" xml:space="preserve">
+    <value>groupDepotInfo</value>
   </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
+  <data name="&gt;&gt;labelAppName.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="buttonLog.ToolTip" xml:space="preserve">
-    <value />
+  <data name="labelDepotName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;checkBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxAppSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="buttonLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 70</value>
-  </data>
-  <data name="&gt;&gt;appList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Apps:</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 12</value>
-  </data>
-  <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
-    <value>checkBox3</value>
-  </data>
-  <data name="labelName.Text" xml:space="preserve">
-    <value>Click Steam icon to login</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 64</value>
-  </data>
-  <data name="&gt;&gt;labelDepotID.Name" xml:space="preserve">
-    <value>labelDepotID</value>
-  </data>
-  <data name="&gt;&gt;checkBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="labelDepotName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
   </data>
   <data name="labelDepotName.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 84</value>
   </data>
-  <data name="&gt;&gt;labelGameCount.Name" xml:space="preserve">
-    <value>labelGameCount</value>
+  <data name="labelDepotName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 16</value>
   </data>
-  <data name="labelGameCount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="labelDepotName.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="labelDepotName.Text" xml:space="preserve">
+    <value>DepotName:</value>
+  </data>
+  <data name="&gt;&gt;labelDepotName.Name" xml:space="preserve">
+    <value>labelDepotName</value>
+  </data>
+  <data name="&gt;&gt;labelDepotName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDepotName.Parent" xml:space="preserve">
+    <value>groupDepotInfo</value>
+  </data>
+  <data name="&gt;&gt;labelDepotName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelAppID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAppID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="labelAppID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 54</value>
+  </data>
+  <data name="labelAppID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 16</value>
+  </data>
+  <data name="labelAppID.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="labelAppID.Text" xml:space="preserve">
+    <value>AppID:</value>
+  </data>
+  <data name="&gt;&gt;labelAppID.Name" xml:space="preserve">
+    <value>labelAppID</value>
+  </data>
+  <data name="&gt;&gt;labelAppID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAppID.Parent" xml:space="preserve">
+    <value>groupDepotInfo</value>
+  </data>
+  <data name="&gt;&gt;labelAppID.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelDepotID.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDepotID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="labelDepotID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 27</value>
+  </data>
+  <data name="labelDepotID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 16</value>
+  </data>
+  <data name="labelDepotID.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="labelDepotID.Text" xml:space="preserve">
+    <value>DepotID:</value>
+  </data>
+  <data name="&gt;&gt;labelDepotID.Name" xml:space="preserve">
+    <value>labelDepotID</value>
+  </data>
+  <data name="&gt;&gt;labelDepotID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDepotID.Parent" xml:space="preserve">
+    <value>groupDepotInfo</value>
+  </data>
+  <data name="&gt;&gt;labelDepotID.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupDepotInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 392</value>
+  </data>
+  <data name="groupDepotInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>464, 210</value>
+  </data>
+  <data name="groupDepotInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupDepotInfo.Text" xml:space="preserve">
+    <value>DepotInfo</value>
+  </data>
+  <data name="&gt;&gt;groupDepotInfo.Name" xml:space="preserve">
+    <value>groupDepotInfo</value>
+  </data>
+  <data name="&gt;&gt;groupDepotInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupDepotInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupDepotInfo.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>482, 210</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>→</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="comboBranches.Location" type="System.Drawing.Point, System.Drawing">
+    <value>259, 38</value>
+  </data>
+  <data name="comboBranches.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 20</value>
+  </data>
+  <data name="comboBranches.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;comboBranches.Name" xml:space="preserve">
+    <value>comboBranches</value>
+  </data>
+  <data name="&gt;&gt;comboBranches.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBranches.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboBranches.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 13</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 12</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Branch:</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="buttonDownload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 306</value>
+  </data>
+  <data name="buttonDownload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 23</value>
+  </data>
+  <data name="buttonDownload.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="buttonDownload.Text" xml:space="preserve">
+    <value>Download Depot</value>
+  </data>
+  <data name="&gt;&gt;buttonDownload.Name" xml:space="preserve">
+    <value>buttonDownload</value>
+  </data>
+  <data name="&gt;&gt;buttonDownload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonDownload.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonDownload.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label7.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>604, 291</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>17, 12</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>↓</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="groupBoxDownloading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panelDownloading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="panelDownloading.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="panelDownloading.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 350</value>
+  </data>
+  <data name="panelDownloading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 21</value>
+  </data>
+  <data name="panelDownloading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 237</value>
+  </data>
+  <data name="panelDownloading.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelDownloading.Name" xml:space="preserve">
+    <value>panelDownloading</value>
+  </data>
+  <data name="&gt;&gt;panelDownloading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelDownloading.Parent" xml:space="preserve">
+    <value>groupBoxDownloading</value>
+  </data>
+  <data name="&gt;&gt;panelDownloading.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxDownloading.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 335</value>
+  </data>
+  <data name="groupBoxDownloading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 264</value>
+  </data>
+  <data name="groupBoxDownloading.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="groupBoxDownloading.Text" xml:space="preserve">
+    <value>DownloadingDepot</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDownloading.Name" xml:space="preserve">
+    <value>groupBoxDownloading</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDownloading.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDownloading.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxDownloading.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="buttonSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 69</value>
+  </data>
+  <data name="buttonSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 32</value>
+  </data>
+  <data name="buttonSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="buttonSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.Name" xml:space="preserve">
+    <value>buttonSettings</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonManuallyInput.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="buttonManuallyInput.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 107</value>
+  </data>
+  <data name="buttonManuallyInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 32</value>
+  </data>
+  <data name="buttonManuallyInput.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="buttonManuallyInput.Text" xml:space="preserve">
+    <value>Advanced Input</value>
+  </data>
+  <data name="&gt;&gt;buttonManuallyInput.Name" xml:space="preserve">
+    <value>buttonManuallyInput</value>
+  </data>
+  <data name="&gt;&gt;buttonManuallyInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonManuallyInput.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonManuallyInput.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 20</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 16</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Download Selected File Only</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 84</value>
+  </data>
+  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 16</value>
+  </data>
+  <data name="checkBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="checkBox4.Text" xml:space="preserve">
+    <value>Download all platforms</value>
+  </data>
+  <metadata name="toolTipMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="checkBox4.ToolTip" xml:space="preserve">
+    <value>Ignore what you select in Depots</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.Name" xml:space="preserve">
+    <value>checkBox4</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 64</value>
+  </data>
+  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 16</value>
+  </data>
+  <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Download the whole App</value>
+  </data>
+  <data name="checkBox3.ToolTip" xml:space="preserve">
+    <value>Ignore what you select in Depots</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.Name" xml:space="preserve">
+    <value>checkBox3</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 42</value>
+  </data>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 16</value>
+  </data>
+  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Download Manifest Only</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
+    <value>checkBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 111</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 23</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Choose Install Directory</value>
+  </data>
+  <data name="button1.ToolTip" xml:space="preserve">
+    <value>./Download</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>511, 146</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 142</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Download Setting</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBoxAppSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 9</value>
+  </data>
+  <data name="textBoxAppSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 21</value>
+  </data>
+  <data name="textBoxAppSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;textBoxAppSearch.Name" xml:space="preserve">
+    <value>textBoxAppSearch</value>
+  </data>
+  <data name="&gt;&gt;textBoxAppSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxAppSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxAppSearch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureAvatar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pictureAvatar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>670, 9</value>
+  </data>
+  <data name="pictureAvatar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="pictureAvatar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureAvatar.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;pictureAvatar.Name" xml:space="preserve">
+    <value>pictureAvatar</value>
+  </data>
+  <data name="&gt;&gt;pictureAvatar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureAvatar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureAvatar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonLog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>SimSun, 12pt</value>
+  </data>
+  <data name="buttonLog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>490, 69</value>
+  </data>
+  <data name="buttonLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 70</value>
+  </data>
+  <data name="buttonLog.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="buttonLog.Text" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="&gt;&gt;buttonLog.Name" xml:space="preserve">
+    <value>buttonLog</value>
+  </data>
+  <data name="&gt;&gt;buttonLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonLog.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonLog.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="folderBrowserDialogMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>140, 17</value>
+  </metadata>
+  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>343, 17</value>
+  </metadata>
   <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA+voAAAEAIAAX8AMAFgAAACgAAAD6AAAA9AEAAAEAIAAAAAAAkNADAAAAAAAAAAAAAAAAAAAA
@@ -4858,77 +5323,17 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
-  <data name="&gt;&gt;pictureAvatar.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="notifyIcon1.Text" xml:space="preserve">
+    <value>SteamDepotDownloader GUI</value>
   </data>
-  <data name="checkBox1.Text" xml:space="preserve">
-    <value>Download Selected File Only</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>→</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="groupBoxDownloading.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="labelDepotID.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 12</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>488, 141</value>
-  </data>
-  <data name="labelAppName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 112</value>
-  </data>
-  <data name="&gt;&gt;textBoxAppSearch.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelOS.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;buttonManuallyInput.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureAvatar.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="groupDepotInfo.Text" xml:space="preserve">
-    <value>DepotInfo</value>
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;checkBox4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="buttonSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 32</value>
-  </data>
-  <data name="&gt;&gt;labelOS.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLog.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="comboBranches.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="groupBoxDownloading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>732, 614</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -9236,526 +9641,31 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
-  <data name="labelDepotSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 143</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 111</value>
-  </data>
-  <data name="labelAppID.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="appList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 60</value>
-  </data>
-  <data name="&gt;&gt;labelAppName.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelGameCount.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="groupBoxDownloading.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panelDownloading.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox4.Text" xml:space="preserve">
-    <value>Download all platforms</value>
-  </data>
-  <data name="buttonLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>490, 69</value>
-  </data>
-  <data name="labelDepotName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;textBoxAppSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupDepotInfo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;comboBranches.Name" xml:space="preserve">
-    <value>comboBranches</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Choose Install Directory</value>
-  </data>
-  <data name="buttonSettings.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelOS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 16</value>
-  </data>
-  <data name="&gt;&gt;buttonSettings.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonManuallyInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 32</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>511, 146</value>
-  </data>
-  <data name="labelAppName.Text" xml:space="preserve">
-    <value>AppName:</value>
-  </data>
-  <data name="&gt;&gt;toolTipMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 16</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSettings.Name" xml:space="preserve">
-    <value>buttonSettings</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="&gt;&gt;listDepots.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 20</value>
-  </data>
-  <data name="&gt;&gt;labelDepotID.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
-  </data>
-  <data name="labelDepotSize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="buttonSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="label3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 12</value>
-  </data>
-  <data name="&gt;&gt;buttonLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkBox2.Text" xml:space="preserve">
-    <value>Download Manifest Only</value>
-  </data>
-  <data name="&gt;&gt;labelGameCount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBoxDownloading.Name" xml:space="preserve">
-    <value>groupBoxDownloading</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;checkBox4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;buttonDownload.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SteamDepotDownloaderForm</value>
-  </data>
-  <data name="&gt;&gt;buttonDownload.Name" xml:space="preserve">
-    <value>buttonDownload</value>
-  </data>
-  <data name="&gt;&gt;labelGameCount.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="checkBox3.Text" xml:space="preserve">
-    <value>Download the whole App</value>
-  </data>
-  <data name="buttonManuallyInput.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 16</value>
-  </data>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="labelGameCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 38</value>
-  </data>
-  <data name="appList.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 16</value>
-  </data>
-  <data name="&gt;&gt;labelDepotID.Parent" xml:space="preserve">
-    <value>groupDepotInfo</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>17, 12</value>
-  </data>
-  <data name="&gt;&gt;labelAppName.Name" xml:space="preserve">
-    <value>labelAppName</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Download Setting</value>
-  </data>
-  <data name="labelAppID.Text" xml:space="preserve">
-    <value>AppID:</value>
-  </data>
-  <data name="labelGameCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 26</value>
-  </data>
-  <data name="buttonSettings.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelDepotSize.Parent" xml:space="preserve">
-    <value>groupDepotInfo</value>
-  </data>
-  <data name="comboBranches.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBranches.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 38</value>
-  </data>
-  <data name="&gt;&gt;checkBox4.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;labelAppID.Name" xml:space="preserve">
-    <value>labelAppID</value>
-  </data>
-  <data name="labelDepotID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="appList.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Branch:</value>
-  </data>
-  <data name="labelAppID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>→</value>
-  </data>
-  <data name="labelDepotID.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;groupBoxDownloading.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonManuallyInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>563, 107</value>
-  </data>
-  <data name="groupBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAppName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;checkBox3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="panelDownloading.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonSettings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Depots:</value>
-  </data>
-  <data name="labelDepotName.Text" xml:space="preserve">
-    <value>DepotName:</value>
-  </data>
-  <data name="buttonLog.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;buttonManuallyInput.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SteamDepotDownloader-GUI By JackMyth</value>
   </data>
   <data name="&gt;&gt;toolTipMain.Name" xml:space="preserve">
     <value>toolTipMain</value>
   </data>
-  <data name="panelDownloading.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 237</value>
+  <data name="&gt;&gt;toolTipMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;folderBrowserDialogMain.Name" xml:space="preserve">
+    <value>folderBrowserDialogMain</value>
   </data>
-  <data name="&gt;&gt;appList.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="&gt;&gt;folderBrowserDialogMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="labelDepotID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 27</value>
+  <data name="&gt;&gt;notifyIcon1.Name" xml:space="preserve">
+    <value>notifyIcon1</value>
   </data>
-  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 16</value>
+  <data name="&gt;&gt;notifyIcon1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SteamDepotDownloaderForm</value>
   </data>
-  <data name="label5.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="buttonSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>563, 69</value>
-  </data>
-  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelAppName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="labelAppID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelDownloading.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelAppID.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="checkBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="labelDepotName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;labelDepotName.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
-    <value>checkBox1</value>
-  </data>
-  <data name="&gt;&gt;labelAppID.Parent" xml:space="preserve">
-    <value>groupDepotInfo</value>
-  </data>
-  <data name="labelAppID.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="label7.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="checkBox1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;panelDownloading.Parent" xml:space="preserve">
-    <value>groupBoxDownloading</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>732, 614</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonDownload.Location" type="System.Drawing.Point, System.Drawing">
-    <value>511, 306</value>
-  </data>
-  <data name="labelName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAppName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panelDownloading.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 21</value>
-  </data>
-  <data name="&gt;&gt;labelAppID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="buttonDownload.Text" xml:space="preserve">
-    <value>Download Depot</value>
-  </data>
-  <data name="labelName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="notifyIcon1.Text" xml:space="preserve">
-    <value>SteamDepotDownloader GUI</value>
-  </data>
-  <data name="textBoxAppSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 9</value>
-  </data>
-  <data name="&gt;&gt;groupDepotInfo.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelDownloading.Name" xml:space="preserve">
-    <value>panelDownloading</value>
-  </data>
-  <data name="panelDownloading.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 350</value>
-  </data>
-  <data name="&gt;&gt;labelAppName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelDepotID.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;appList.Name" xml:space="preserve">
-    <value>appList</value>
-  </data>
-  <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;listDepots.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="groupBoxDownloading.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 335</value>
-  </data>
-  <data name="&gt;&gt;textBoxAppSearch.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="checkBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelDepotName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 16</value>
-  </data>
-  <data name="labelOS.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="buttonManuallyInput.Text" xml:space="preserve">
-    <value>Advanced Input</value>
-  </data>
-  <data name="buttonManuallyInput.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="&gt;&gt;groupBoxDownloading.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelDepotName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureAvatar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 50</value>
-  </data>
-  <data name="&gt;&gt;labelAppName.Parent" xml:space="preserve">
-    <value>groupDepotInfo</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelDepotSize.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>608, 261</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="labelAppID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="labelDepotName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>SimSun, 12pt</value>
-  </data>
-  <data name="&gt;&gt;buttonDownload.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="groupDepotInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
-    <value>checkBox2</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="panelDownloading.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="checkBox4.ToolTip" xml:space="preserve">
-    <value>Ignore what you select in Depots</value>
-  </data>
-  <data name="labelDepotID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 16</value>
-  </data>
-  <metadata name="toolTipMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>343, 17</value>
-  </metadata>
-  <metadata name="folderBrowserDialogMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>140, 17</value>
-  </metadata>
 </root>

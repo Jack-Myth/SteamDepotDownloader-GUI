@@ -39,7 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxMaxServers = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxManifest = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxBetaPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxMaxServers);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxManifest);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBoxBetaPassword);
             this.groupBox1.Controls.Add(this.label4);
@@ -173,12 +173,12 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "ManifestID:";
             // 
-            // textBox1
+            // textBoxManifest
             // 
-            this.textBox1.Location = new System.Drawing.Point(254, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(117, 21);
-            this.textBox1.TabIndex = 7;
+            this.textBoxManifest.Location = new System.Drawing.Point(254, 72);
+            this.textBoxManifest.Name = "textBoxManifest";
+            this.textBoxManifest.Size = new System.Drawing.Size(117, 21);
+            this.textBoxManifest.TabIndex = 7;
             // 
             // label5
             // 
@@ -364,7 +364,7 @@
         private System.Windows.Forms.ComboBox comboBoxOS;
         private System.Windows.Forms.Label labelOS;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxManifest;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxMaxDownloads;
         private System.Windows.Forms.Label label7;

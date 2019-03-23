@@ -52,11 +52,13 @@ namespace SteamDepotDownloader_GUI
                 {
                     Dc.MaxDownloads = Dr.MaxDownload;
                     Dc.MaxServers = Dr.MaxServer;
+                    Dc.ManifestId = Dr.ManifestID;
                 }
                 else
                 {
                     Dc.MaxDownloads = ConfigStore.TheConfig.MaxDownload;
                     Dc.MaxServers = ConfigStore.TheConfig.MaxServer;
+                    Dc.ManifestId = ContentDownloader.INVALID_MANIFEST_ID;
                 }
                 if (Dr.FileRegex != null)
                 {
@@ -211,6 +213,7 @@ namespace SteamDepotDownloader_GUI
                 Dr.MaxServer = Dc.MaxServers;
                 Dr.AllPlatforms = Dc.DownloadAllPlatforms;
                 Dr.AdvancedConfig = AdvancedConfig;
+                Dr.ManifestID = Dc.ManifestId;
                 if (Dc.FilesToDownloadRegex != null)
                 {
                     Dr.FileRegex = new List<string>();

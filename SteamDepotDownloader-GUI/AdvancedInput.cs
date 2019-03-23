@@ -98,7 +98,12 @@ namespace SteamDepotDownloader_GUI
             try
             {
                 Dc.AppID = LoadParamter(this.textBoxAppID.Text,ContentDownloader.INVALID_APP_ID);
-                Dc.DepotID = LoadParamter(this.textBoxAppID.Text, ContentDownloader.INVALID_DEPOT_ID);
+                Dc.DepotID = LoadParamter(this.textBoxDepotID.Text, ContentDownloader.INVALID_DEPOT_ID);
+                ulong tmpManifestID;
+                if (ulong.TryParse(this.textBoxManifest.Text, out tmpManifestID))
+                    Dc.ManifestId = tmpManifestID;
+                else
+                    Dc.ManifestId = ContentDownloader.INVALID_MANIFEST_ID;
                 if (Dc.DepotID != ContentDownloader.INVALID_DEPOT_ID)
                     Dc.ForceDepot = true;
                 else
@@ -106,9 +111,9 @@ namespace SteamDepotDownloader_GUI
                 Program.UsrConfig.CellID = LoadParamter(this.textBoxCellID.Text, Program.UsrConfig.CellID);
                 Dc.OS = this.comboBoxOS.Text.ToLowerInvariant();
                 Dc.Branch = LoadParamter(this.textBoxBranch.Text, "public");
-                Dc.BetaPassword = LoadParamter(this.textBoxBranch.Text, "");
+                Dc.BetaPassword = LoadParamter(this.textBoxBetaPassword.Text, "");
                 Dc.MaxDownloads = LoadParamter(this.textBoxMaxDownloads.Text, Dc.MaxDownloads);
-                Dc.MaxServers = LoadParamter(this.textBoxMaxDownloads.Text, Dc.MaxServers);
+                Dc.MaxServers = LoadParamter(this.textBoxMaxServers.Text, Dc.MaxServers);
                 Dc.DownloadAllPlatforms = this.checkBoxAllPlatforms.Checked;
                 Dc.DownloadManifestOnly = this.checkBoxManifestOnly.Checked;
                 Program.MainWindowForm.CreateDownloadTask(this.textBoxDownloadName.Text,Dc,true,false);

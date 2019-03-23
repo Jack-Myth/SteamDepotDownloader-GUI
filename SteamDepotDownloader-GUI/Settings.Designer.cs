@@ -70,7 +70,6 @@
             // 
             // comboBoxMaxServer
             // 
-            resources.ApplyResources(this.comboBoxMaxServer, "comboBoxMaxServer");
             this.comboBoxMaxServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaxServer.FormattingEnabled = true;
             this.comboBoxMaxServer.Items.AddRange(new object[] {
@@ -94,6 +93,7 @@
             resources.GetString("comboBoxMaxServer.Items17"),
             resources.GetString("comboBoxMaxServer.Items18"),
             resources.GetString("comboBoxMaxServer.Items19")});
+            resources.ApplyResources(this.comboBoxMaxServer, "comboBoxMaxServer");
             this.comboBoxMaxServer.Name = "comboBoxMaxServer";
             this.comboBoxMaxServer.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaxServer_SelectedIndexChanged);
             // 
@@ -109,7 +109,6 @@
             // 
             // comboBoxMaxDownload
             // 
-            resources.ApplyResources(this.comboBoxMaxDownload, "comboBoxMaxDownload");
             this.comboBoxMaxDownload.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaxDownload.FormattingEnabled = true;
             this.comboBoxMaxDownload.Items.AddRange(new object[] {
@@ -133,6 +132,7 @@
             resources.GetString("comboBoxMaxDownload.Items17"),
             resources.GetString("comboBoxMaxDownload.Items18"),
             resources.GetString("comboBoxMaxDownload.Items19")});
+            resources.ApplyResources(this.comboBoxMaxDownload, "comboBoxMaxDownload");
             this.comboBoxMaxDownload.Name = "comboBoxMaxDownload";
             this.comboBoxMaxDownload.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaxDownload_SelectedIndexChanged);
             // 
