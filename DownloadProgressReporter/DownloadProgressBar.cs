@@ -24,11 +24,14 @@ namespace SteamDepotDownloader_GUI
         OnDownloadProgressDelegate OdPDelegate;
         public delegate void OnDownloadFinishedDelegate(bool IsSuccessful, string ErrorMsg);
         OnDownloadFinishedDelegate OdFDelegate;
+        public delegate void OnStateChangedDelegate(bool mIsDownloading);
+        OnStateChangedDelegate OSCDelegate;
         public DownloadProgressBar()
         {
             InitializeComponent();
             OdPDelegate = new OnDownloadProgressDelegate(OnDownloadProgressView);
             OdFDelegate = new OnDownloadFinishedDelegate(OnDownloadFinishedView);
+            OSCDelegate = new OnStateChangedDelegate(OnStateChangedView);
         }
 
         public void InitDownloading(string DownloadName,uint AppID,uint DepotID,string mBranch)
@@ -85,10 +88,15 @@ namespace SteamDepotDownloader_GUI
         public void OnDownloadFinishedView(bool IsSuccessful,string ErrorMsg)
         {
             IsDownloadFinished = true;
-            OnDownloadFinishedReport.Invoke(this.labelDepotName.Text, AppId, DepotId, Branch, IsSuccessful, ErrorMsg);
+            this.Invoke(OnDownloadFinishedReport, this.labelDepotName.Text, AppId, DepotId, Branch, IsSuccessful, ErrorMsg);
         }
 
         public void OnStateChanged(bool mIsDownloading)
+        {
+            this.Invoke(OSCDelegate, mIsDownloading);
+        }
+
+        public void OnStateChangedView(bool mIsDownloading)
         {
             Downloading = mIsDownloading;
             toolStripMenuItem1.Enabled = true;

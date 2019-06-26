@@ -1007,16 +1007,18 @@ namespace DepotDownloader
                 if (cdnPool == null)
                     cdnPool = new CDNClientPool();
 
-                new Thread(() =>
-                {
-                    try
-                    {
-                        Config.FireOnStateChangedEvent(true);
-                        DownloadAppAsync().Wait();
-                        Config.FireOnStateChangedEvent(false);
-                    }
-                    catch { };
-                }).Start();
+                var Thre = new Thread(() =>
+                 {
+                     try
+                     {
+                         Config.FireOnStateChangedEvent(true);
+                         DownloadAppAsync().Wait();
+                         Config.FireOnStateChangedEvent(false);
+                     }
+                     catch { };
+                 });
+                Thre.IsBackground = true;
+                Thre.Start();
             }
         }
 
