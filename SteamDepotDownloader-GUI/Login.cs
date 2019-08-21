@@ -25,7 +25,7 @@ namespace SteamDepotDownloader_GUI
             Program.UsrConfig.Password = this.textBoxPassword.Text;
             Program.UsrConfig.RememberPassword = this.checkBoxRememberPass.Checked;
             Program.UsrConfig.TwoFactorAuthCode = this.textBoxTwoFractorAuthCode.Text;
-            if (DepotDownloader.ContentDownloader.InitializeSteam3(Program.UsrConfig)&&DepotDownloader.ContentDownloader.steam3.bConnected)
+            if (DepotDownloader.ContentDownloader.InitializeSteam3(Program.UsrConfig)&&DepotDownloader.ContentDownloader.Steam3.IsConnected)
             {
                 Close();
                 SteamDepotDownloader_GUI.Program.MainWindowForm.RefreshAppList();

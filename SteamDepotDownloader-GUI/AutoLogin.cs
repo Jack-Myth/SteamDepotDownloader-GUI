@@ -27,7 +27,7 @@ namespace SteamDepotDownloader_GUI
             Program.UsrConfig = new DepotDownloader.UserConfig();
             Program.UsrConfig.Username = this.comboBoxAccount.Text;
             Program.UsrConfig.RememberPassword = true;
-            if(DepotDownloader.ContentDownloader.InitializeSteam3(Program.UsrConfig)&&DepotDownloader.ContentDownloader.steam3.bConnected)
+            if(DepotDownloader.ContentDownloader.InitializeSteam3(Program.UsrConfig)&&DepotDownloader.ContentDownloader.Steam3.IsConnected)
                 SteamDepotDownloader_GUI.Program.MainWindowForm.RefreshAppList();
             else
                 MessageBox.Show(Properties.Resources.AutoLoginFailed, "SteamDepotDownloader-GUI", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

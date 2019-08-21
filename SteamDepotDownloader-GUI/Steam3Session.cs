@@ -1,4 +1,5 @@
 ﻿using SteamKit2;
+using SteamKit2.Unified.Internal;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading;
 namespace DepotDownloader
 {
 
-    internal class Steam3Session
+    class Steam3Session
     {
         public class Credentials
         {
@@ -36,19 +37,22 @@ namespace DepotDownloader
         public Dictionary<uint, SteamApps.PICSProductInfoCallback.PICSProductInfo> AppInfo { get; private set; }
         public Dictionary<uint, SteamApps.PICSProductInfoCallback.PICSProductInfo> PackageInfo { get; private set; }
         public Dictionary<string, byte[]> AppBetaPasswords { get; private set; }
+        public bool IsConnected { get => bConnected; }
+        public bool IsAborted { get => bAborted;  }
 
         public SteamClient steamClient;
         public SteamUser steamUser;
-        public SteamApps steamApps;
+        SteamApps steamApps;
+        SteamUnifiedMessages.UnifiedService<IPublishedFile> steamPublishedFile;
 
         CallbackManager callbacks;
 
         bool authenticatedUser;
-        public bool bConnected { get; private set; }
-        public bool bConnecting { get; private set; }
+        bool bConnected;
+        bool bConnecting;
         bool bAborted;
         bool bExpectingDisconnectRemote;
-        public bool bDidDisconnect { get; private set; }
+        bool bDidDisconnect;
         int connectionBackoff;
         int seq; // more hack fixes
         DateTime connectTime;
@@ -85,6 +89,8 @@ namespace DepotDownloader
 
             this.steamUser = this.steamClient.GetHandler<SteamUser>();
             this.steamApps = this.steamClient.GetHandler<SteamApps>();
+            var steamUnifiedMessages = this.steamClient.GetHandler<SteamUnifiedMessages>();
+            this.steamPublishedFile = steamUnifiedMessages.CreateService<IPublishedFile>();
 
             this.callbacks = new CallbackManager( this.steamClient );
 
@@ -289,12 +295,12 @@ namespace DepotDownloader
                 foreach ( var package_value in packageInfo.Packages )
                 {
                     var package = package_value.Value;
-                    PackageInfo[package.ID]= package ;
+                    PackageInfo.Add( package.ID, package );
                 }
 
                 foreach ( var package in packageInfo.UnknownPackages )
                 {
-                    PackageInfo[package]=null;
+                    PackageInfo.Add( package, null );
                 }
             };
 
@@ -381,7 +387,7 @@ namespace DepotDownloader
             WaitUntilCallback( () =>
             {
                 callbacks.Subscribe( steamApps.GetDepotDecryptionKey( depotId, appid ), cbMethod );
-            }, () => completed);
+            }, () => { return completed; } );
         }
 
         public string ResolveCDNTopLevelHost(string host)
@@ -443,6 +449,36 @@ namespace DepotDownloader
             {
                 callbacks.Subscribe( steamApps.CheckAppBetaPassword( appid, password ), cbMethod );
             }, () => { return completed; } );
+        }
+
+        public PublishedFileDetails GetPubfileDetails( PublishedFileID pubFile )
+        {
+            var pubFileRequest = new CPublishedFile_GetDetails_Request();
+            pubFileRequest.publishedfileids.Add( pubFile );
+
+            bool completed = false;
+            PublishedFileDetails details = null;
+
+            Action<SteamUnifiedMessages.ServiceMethodResponse> cbMethod = callback =>
+            {
+                completed = true;
+                if ( callback.Result == EResult.OK )
+                {
+                    var response = callback.GetDeserializedResponse<CPublishedFile_GetDetails_Response>();
+                    details = response.publishedfiledetails[0];
+                }
+                else
+                {
+                    throw new Exception( $"EResult {(int)callback.Result} ({callback.Result}) while retrieving UGC id for pubfile {pubFile}.");
+                }
+            };
+
+            WaitUntilCallback(() =>
+            {
+                callbacks.Subscribe( steamPublishedFile.SendMessage( api => api.GetDetails( pubFileRequest ) ), cbMethod );
+            }, () => { return completed; });
+
+            return details;
         }
 
         void Connect()
@@ -604,7 +640,6 @@ namespace DepotDownloader
                     Logger.Error( "Need authentication code from your email address!!!" );
                     return;
                 }
-                
 
                 Logger.Info( "Retrying Steam3 connection..." );
                 Connect();

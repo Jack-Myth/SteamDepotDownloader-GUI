@@ -79,23 +79,23 @@ namespace SteamDepotDownloader_GUI
         public void RefreshAppList()
         {
             //Update App List
-            if (ContentDownloader.steam3 == null)
+            if (ContentDownloader.Steam3 == null)
                 return;
             this.appList.Items.Clear();
             this.listDepots.Items.Clear();
             this.ClearDepotInfo();
             var WaitingForm = Waiting.ShowWaiting(Properties.Resources.UpdateAppListMsg);
-            ContentDownloader.steam3.RequestFreeAppLicense(730);
+            ContentDownloader.Steam3.RequestFreeAppLicense(730);
             IEnumerable<uint> licenseQuery;
-            licenseQuery = ContentDownloader.steam3.Licenses.Select(x => x.PackageID);
-            ContentDownloader.steam3.RequestPackageInfo(licenseQuery);
-            ContentDownloader.steam3.FillAppsList();
-            foreach (uint AppID in ContentDownloader.steam3.AppInfo.Keys)
+            licenseQuery = ContentDownloader.Steam3.Licenses.Select(x => x.PackageID);
+            ContentDownloader.Steam3.RequestPackageInfo(licenseQuery);
+            ContentDownloader.Steam3.FillAppsList();
+            foreach (uint AppID in ContentDownloader.Steam3.AppInfo.Keys)
             {
-                int itemIndex = this.appList.Items.Add(ContentDownloader.steam3.AppInfo[AppID].KeyValues["common"]["name"].AsString());
+                int itemIndex = this.appList.Items.Add(ContentDownloader.Steam3.AppInfo[AppID].KeyValues["common"]["name"].AsString());
             }
-            this.appList.Tag = ContentDownloader.steam3.AppInfo.Keys;
-            this.labelGameCount.Text = string.Format(Properties.Resources.Apps, ContentDownloader.steam3.AppInfo.Count);
+            this.appList.Tag = ContentDownloader.Steam3.AppInfo.Keys;
+            this.labelGameCount.Text = string.Format(Properties.Resources.Apps, ContentDownloader.Steam3.AppInfo.Count);
             WaitingForm.Close();
         }
 
@@ -110,7 +110,7 @@ namespace SteamDepotDownloader_GUI
             try
             {
                 var DepotList =new List<uint>();
-                var depotsValue = ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["depots"];
+                var depotsValue = ContentDownloader.Steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["depots"];
                 int PublicBranchIndex = -1;
                 foreach (KeyValue branches in depotsValue["branches"].Children)
                 {
@@ -143,10 +143,10 @@ namespace SteamDepotDownloader_GUI
             var listDepotIDs = (List<uint>)this.listDepots.Tag;
             uint DepotID = listDepotIDs[this.listDepots.SelectedIndex];
             var Keys = (Dictionary<uint, SteamApps.PICSProductInfoCallback.PICSProductInfo>.KeyCollection)this.appList.Tag;
-            var depotsValue = ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["depots"][DepotID.ToString()];
+            var depotsValue = ContentDownloader.Steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["depots"][DepotID.ToString()];
             this.labelAppID.Text = "AppID:" + Keys.ElementAt(appList.SelectedIndex).ToString();
             this.labelDepotID.Text = "DepotID:" + DepotID.ToString();
-            this.labelAppName.Text = "AppName:"+ ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
+            this.labelAppName.Text = "AppName:"+ ContentDownloader.Steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
             this.labelDepotName.Text = "DepotName:" + depotsValue["name"].AsString();
             this.labelOS.Text = "OS:" + depotsValue[DepotID.ToString()]["config"]["oslist"].AsString();
             this.labelDepotSize.Text = "DepotMaxSize:";
@@ -238,7 +238,7 @@ namespace SteamDepotDownloader_GUI
                 DepotID = listDepotIDs[this.listDepots.SelectedIndex];
             var Keys = (Dictionary<uint, SteamApps.PICSProductInfoCallback.PICSProductInfo>.KeyCollection)this.appList.Tag;
             uint AppID = Keys.ElementAt(appList.SelectedIndex);
-            var depotsValue = ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["depots"][DepotID.ToString()];
+            var depotsValue = ContentDownloader.Steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["depots"][DepotID.ToString()];
             if (AppID == 0)
                 return;
             //Check if there have any same depot are downloading
@@ -270,7 +270,7 @@ namespace SteamDepotDownloader_GUI
             if (Dc.ForceDepot)
                 DownloadName = depotsValue["name"].AsString();
             else
-                DownloadName = ContentDownloader.steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
+                DownloadName = ContentDownloader.Steam3.AppInfo[Keys.ElementAt(appList.SelectedIndex)].KeyValues["common"]["name"].AsString();
             CreateDownloadTask(DownloadName,Dc,false,false);
         }
 
@@ -374,7 +374,7 @@ namespace SteamDepotDownloader_GUI
             {
                 new AutoLogin(ConfigStore.TheConfig.LoginKeys.Keys.ToList()).ShowDialog();
             }
-            if (!(ContentDownloader.steam3 != null && ContentDownloader.steam3.bConnected))
+            if (!(ContentDownloader.Steam3 != null && ContentDownloader.Steam3.IsConnected))
                 new Login().ShowDialog();
         }
 
@@ -438,9 +438,9 @@ namespace SteamDepotDownloader_GUI
 
         private void pictureAvatar_Click(object sender, EventArgs e)
         {
-            if (ContentDownloader.steam3 != null)
+            if (ContentDownloader.Steam3 != null)
             {
-                if(ContentDownloader.steam3.bConnected==false)
+                if(ContentDownloader.Steam3.IsConnected==false)
                 {
                     ContentDownloader.ShutdownSteam3();
                     (new Login()).ShowDialog();

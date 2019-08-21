@@ -51,17 +51,17 @@ namespace SteamDepotDownloader_GUI
             {
                 this.Text = "Downloading File List...";
                 this.Refresh();
-                ContentDownloader.steam3.RequestDepotKey(DepotID,AppID);
-                if(!ContentDownloader.steam3.DepotKeys.ContainsKey(DepotID))
+                ContentDownloader.Steam3.RequestDepotKey(DepotID,AppID);
+                if(!ContentDownloader.Steam3.DepotKeys.ContainsKey(DepotID))
                 {
                     MessageBox.Show(Properties.Resources.NoDepotKey, "FileSelector",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                     //return;
                     //User may still need to use FileRegex
                     Close();
                 }
-                byte[] depotKey = ContentDownloader.steam3.DepotKeys[DepotID];
-                //ContentDownloader.steam3.RequestAppTicket(AppID);
-                ContentDownloader.steam3.RequestAppTicket(DepotID);
+                byte[] depotKey = ContentDownloader.Steam3.DepotKeys[DepotID];
+                //ContentDownloader.Steam3.RequestAppTicket(AppID);
+                ContentDownloader.Steam3.RequestAppTicket(DepotID);
                 var client = await DepotDownloader.ContentDownloader.GlobalCDNPool.GetConnectionForDepotAsync(AppID, DepotID, depotKey, System.Threading.CancellationToken.None).ConfigureAwait(true);
                 var SteamKitdepotManifest = await client.DownloadManifestAsync(DepotID, ManifestID).ConfigureAwait(true);
                 if (SteamKitdepotManifest != null)
