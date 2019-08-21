@@ -58,6 +58,7 @@ namespace SteamDepotDownloader_GUI
                     //return;
                     //User may still need to use FileRegex
                     Close();
+                    return;
                 }
                 byte[] depotKey = ContentDownloader.Steam3.DepotKeys[DepotID];
                 //ContentDownloader.Steam3.RequestAppTicket(AppID);
@@ -264,7 +265,10 @@ namespace SteamDepotDownloader_GUI
             foreach (TreeNode Tn in this.treeViewFileList.Nodes)
             {
                 if (Tn.Nodes != null && Tn.Nodes.Count > 0)
+                {
                     setChildNodeCheckedState(Tn, this.checkSelectAll.Checked);
+                    Tn.Checked = this.checkSelectAll.Checked;
+                }
                 else
                     Tn.Checked = this.checkSelectAll.Checked;
             }

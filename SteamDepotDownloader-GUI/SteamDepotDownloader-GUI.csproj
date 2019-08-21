@@ -179,7 +179,6 @@
     <EmbeddedResource Include="Waiting.resx">
       <DependentUpon>Waiting.cs</DependentUpon>
     </EmbeddedResource>
-    <Fakes Include="Fakes\SteamKit2.fakes" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
