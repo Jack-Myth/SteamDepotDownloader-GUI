@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using DepotDownloader;
+using SteamDepotDownloader_GUI.Properties;
 using SteamKit2;
 
 namespace SteamDepotDownloader_GUI
@@ -26,6 +27,7 @@ namespace SteamDepotDownloader_GUI
 
         public delegate void UpdateBetaPasswordRecordDelegate(uint AppID, uint DepotID, string Branch, string BetaPassword);
         public UpdateBetaPasswordRecordDelegate UbpRDelegate;
+        public ulong PendingManifestID=ContentDownloader.INVALID_MANIFEST_ID;
 
         public SteamDepotDownloaderForm()
         {
@@ -134,6 +136,7 @@ namespace SteamDepotDownloader_GUI
                 this.listDepots.Tag = DepotList;
             } catch (Exception) { };
             ClearDepotInfo();
+            ClearPendingManifest();
         }
 
         private void listDepots_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,6 +163,7 @@ namespace SteamDepotDownloader_GUI
                 else
                     this.labelDepotSize.Text += (SizeInKB / 1024f / 1024f).ToString("#0.00") + "GB";
             }catch { };
+            ClearPendingManifest();
         }
 
         private void ClearDepotInfo()
@@ -262,6 +266,7 @@ namespace SteamDepotDownloader_GUI
             Dc.MaxDownloads = Math.Max(0, ConfigStore.TheConfig.MaxDownload);
             Dc.MaxServers = Math.Max(0, ConfigStore.TheConfig.MaxServer);
             Dc.DownloadAllPlatforms = this.checkBox4.Checked;
+            Dc.ManifestId = PendingManifestID;
             if (Dc.ForceDepot)
                 Dc.DepotID = DepotID;
             else
@@ -511,6 +516,40 @@ namespace SteamDepotDownloader_GUI
             this.Show();
             this.WindowState = FormWindowState.Normal;
             this.notifyIcon1.Visible = false;
+        }
+
+        void ClearPendingManifest()
+        {
+            PendingManifestID = ContentDownloader.INVALID_MANIFEST_ID;
+            this.buttonSelectManifest.Text = string.Format(Resources.CurrentManifestID, Resources.Default);
+            if (this.comboBranches.Text.Equals(ContentDownloader.DEFAULT_BRANCH, StringComparison.OrdinalIgnoreCase))
+            {
+                this.buttonSelectManifest.Enabled = true;
+                this.toolTipMain.SetToolTip(this.buttonSelectManifest, "");
+            }
+            else
+            {
+                this.buttonSelectManifest.Enabled = false;
+                this.toolTipMain.SetToolTip(this.buttonSelectManifest, Resources.bnp_nomanifest);
+            }
+        }
+
+        private void ComboBranches_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClearPendingManifest();
+        }
+
+        private void ButtonSelectManifest_Click(object sender, EventArgs e)
+        {
+            var listDepotIDs = (List<uint>)this.listDepots.Tag;
+            uint DepotID = 0;
+            if (this.listDepots.SelectedIndex >= 0)
+                DepotID = listDepotIDs[this.listDepots.SelectedIndex];
+            PendingManifestID = ManifestIDSelector.ChooseManifestID(DepotID);
+            if (PendingManifestID == ContentDownloader.INVALID_MANIFEST_ID)
+                this.buttonSelectManifest.Text = string.Format(Resources.CurrentManifestID, Resources.Default);
+            else
+                this.buttonSelectManifest.Text = string.Format(Resources.CurrentManifestID, PendingManifestID.ToString());
         }
     }
 }

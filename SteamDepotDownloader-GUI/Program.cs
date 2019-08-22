@@ -8,6 +8,22 @@ using System.Windows.Forms;
 namespace SteamDepotDownloader_GUI
 {
 
+    public struct ManifestHistoryRecord
+    {
+        public struct ManifestHistoryRecordSingle
+        {
+            public string Date;
+            public string RelativeDate;
+            public ulong ManifestID;
+        }
+        public string DepotID;
+        public string BuildID;
+        public string ManifestID;
+        public string DepotName;
+        public string LastUpdate;
+        public List<ManifestHistoryRecordSingle> HistoryCollection;
+    }
+
     static class Program
     {
         /// <summary>
@@ -19,6 +35,10 @@ namespace SteamDepotDownloader_GUI
         public static SteamDepotDownloaderForm MainWindowForm;
         public static Log LogForm;
         public const string CacheDir = "./Cache";
+
+        public static WeakReference<HtmlAgilityPack.HtmlWeb> htmlWebWeakInstance = new WeakReference<HtmlAgilityPack.HtmlWeb>(null);
+
+        public static Dictionary<uint, ManifestHistoryRecord> ManifestHistoryCache = new Dictionary<uint, ManifestHistoryRecord>();
 
         public static List<DepotDownloader.ContentDownloader> DownloaderInstances=new List<DepotDownloader.ContentDownloader>();
         [STAThread]

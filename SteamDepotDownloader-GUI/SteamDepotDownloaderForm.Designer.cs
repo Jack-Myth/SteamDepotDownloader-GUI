@@ -63,6 +63,7 @@
             this.textBoxAppSearch = new System.Windows.Forms.TextBox();
             this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.buttonLog = new System.Windows.Forms.Button();
+            this.buttonSelectManifest = new System.Windows.Forms.Button();
             this.folderBrowserDialogMain = new System.Windows.Forms.FolderBrowserDialog();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.groupDepotInfo.SuspendLayout();
@@ -163,6 +164,7 @@
             this.comboBranches.FormattingEnabled = true;
             resources.ApplyResources(this.comboBranches, "comboBranches");
             this.comboBranches.Name = "comboBranches";
+            this.comboBranches.SelectedIndexChanged += new System.EventHandler(this.ComboBranches_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -280,6 +282,13 @@
             this.buttonLog.UseVisualStyleBackColor = true;
             this.buttonLog.Click += new System.EventHandler(this.buttonLog_Click);
             // 
+            // buttonSelectManifest
+            // 
+            resources.ApplyResources(this.buttonSelectManifest, "buttonSelectManifest");
+            this.buttonSelectManifest.Name = "buttonSelectManifest";
+            this.buttonSelectManifest.UseVisualStyleBackColor = true;
+            this.buttonSelectManifest.Click += new System.EventHandler(this.ButtonSelectManifest_Click);
+            // 
             // notifyIcon1
             // 
             resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
@@ -289,6 +298,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonSelectManifest);
             this.Controls.Add(this.buttonLog);
             this.Controls.Add(this.pictureAvatar);
             this.Controls.Add(this.textBoxAppSearch);
@@ -364,6 +374,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         internal System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button buttonLog;
+        private System.Windows.Forms.Button buttonSelectManifest;
     }
 }
 

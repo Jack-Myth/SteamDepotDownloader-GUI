@@ -187,4 +187,39 @@
   <data name="Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mids_BuildID" xml:space="preserve">
+    <value>Build ID:{0}</value>
+  </data>
+  <data name="mids_DepotID" xml:space="preserve">
+    <value>Depot ID:{0}</value>
+  </data>
+  <data name="mids_DepotName" xml:space="preserve">
+    <value>Depot Name:{0}</value>
+  </data>
+  <data name="mids_LastUpdate" xml:space="preserve">
+    <value>Last Update:{0}</value>
+  </data>
+  <data name="mids_ManifestID" xml:space="preserve">
+    <value>Manifest ID:{0}</value>
+  </data>
+  <data name="GettingManifestHistory" xml:space="preserve">
+    <value>Getting Manifest History...</value>
+  </data>
+  <data name="FailedToGetManifestHistory" xml:space="preserve">
+    <value>Failed To Get Manifest History!</value>
+  </data>
+  <data name="CurrentManifestID" xml:space="preserve">
+    <value>Current ManifestID:
+{0}</value>
+  </data>
+  <data name="bnp_nomanifest" xml:space="preserve">
+    <value>SteamDB only have Manifest History for public branch
+To use ManifestID for other branch, try Advanced Input</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>(Default)</value>
+  </data>
+  <data name="dbconnectfailed" xml:space="preserve">
+    <value>Connection to SteamDB out of time</value>
+  </data>
 </root>

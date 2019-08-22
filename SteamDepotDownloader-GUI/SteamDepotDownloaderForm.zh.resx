@@ -117,141 +117,72 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="appList.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label2.ToolTip" xml:space="preserve">
-    <value />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>472, 401</value>
   </data>
   <data name="labelName.Text" xml:space="preserve">
     <value>点击Steam图标来登陆</value>
   </data>
-  <data name="labelName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelGameCount.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="listDepots.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelOS.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelDepotSize.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAppName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelDepotName.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelAppID.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="labelDepotID.ToolTip" xml:space="preserve">
-    <value />
+  <data name="groupDepotInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>928, 407</value>
   </data>
   <data name="groupDepotInfo.Text" xml:space="preserve">
     <value>Depot信息</value>
   </data>
-  <data name="groupDepotInfo.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="comboBranches.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="label6.ToolTip" xml:space="preserve">
-    <value />
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>964, 413</value>
   </data>
   <data name="buttonDownload.Text" xml:space="preserve">
     <value>下载Depot</value>
   </data>
-  <data name="buttonDownload.ToolTip" xml:space="preserve">
-    <value />
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1208, 575</value>
   </data>
-  <data name="label7.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panelDownloading.ToolTip" xml:space="preserve">
-    <value />
+  <data name="groupBoxDownloading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 515</value>
   </data>
   <data name="groupBoxDownloading.Text" xml:space="preserve">
     <value>正在下载的Depot</value>
   </data>
-  <data name="groupBoxDownloading.ToolTip" xml:space="preserve">
-    <value />
+  <data name="panelDownloading.Size" type="System.Drawing.Size, System.Drawing">
+    <value>442, 461</value>
   </data>
   <data name="buttonSettings.Text" xml:space="preserve">
     <value>设置</value>
   </data>
-  <data name="buttonSettings.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="buttonManuallyInput.Text" xml:space="preserve">
     <value>高级输入</value>
   </data>
-  <data name="buttonManuallyInput.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 16</value>
+    <value>210, 28</value>
   </data>
   <data name="checkBox1.Text" xml:space="preserve">
     <value>只下载选定文件</value>
   </data>
-  <data name="checkBox1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>下载设置</value>
   </data>
   <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 16</value>
+    <value>258, 28</value>
   </data>
   <data name="checkBox4.Text" xml:space="preserve">
     <value>下载所有平台的文件</value>
   </data>
   <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 16</value>
+    <value>174, 28</value>
   </data>
   <data name="checkBox3.Text" xml:space="preserve">
     <value>下载整个App</value>
   </data>
   <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 16</value>
+    <value>222, 28</value>
   </data>
   <data name="checkBox2.Text" xml:space="preserve">
     <value>只下载 Manifest</value>
   </data>
-  <data name="checkBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="button1.Text" xml:space="preserve">
     <value>选择安装目录</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>下载设置</value>
-  </data>
-  <data name="groupBox2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="textBoxAppSearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureAvatar.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="buttonLog.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -4559,6 +4490,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1464, 1215</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEA+voAAAEAIAAX8AMAFgAAACgAAAD6AAAA9AEAAAEAIAAAAAAAkNADAAAAAAAAAAAAAAAAAAAA
@@ -8865,7 +8799,8 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

@@ -263,7 +263,10 @@ namespace DepotDownloader
                 if (node_encrypted != KeyValue.Invalid)
                 {
                     string password = BetaPassword;
-                    if ((password == null || password == "") && Util.InputBox("SteamDepotDownloader_GUI", SteamDepotDownloader_GUI.Properties.Resources.BetaPasswordRequest, ref password) != System.Windows.Forms.DialogResult.OK)
+                    if ((password == null || password == "") && 
+                        Util.InputBox("SteamDepotDownloader_GUI",
+                        SteamDepotDownloader_GUI.Properties.Resources.BetaPasswordRequest,
+                        ref password) != System.Windows.Forms.DialogResult.OK)
                     {
                         Logger.Error("Need credentials");
                         return INVALID_MANIFEST_ID;
