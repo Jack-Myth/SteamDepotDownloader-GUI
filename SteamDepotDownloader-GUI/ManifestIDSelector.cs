@@ -161,6 +161,7 @@ Refresh:
                 curHistory.SubItems.Add(ManifestRecord.HistoryCollection[i].ManifestID.ToString());
                 this.listViewManifests.Items.Add(curHistory);
             }
+            this.Text = "ManifestID Selelctor";
         }
 
         private void Button2_Click(object sender, EventArgs e)
