@@ -132,7 +132,7 @@
     <value>点击Steam图标来登陆</value>
   </data>
   <data name="labelGameCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-236, 38</value>
+    <value>496, 38</value>
   </data>
   <data name="groupDepotInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left</value>
@@ -168,7 +168,7 @@
     <value>正在下载的Depot</value>
   </data>
   <data name="panelDownloading.Size" type="System.Drawing.Size, System.Drawing">
-    <value>206, 218</value>
+    <value>224, 245</value>
   </data>
   <data name="buttonSettings.Text" xml:space="preserve">
     <value>设置</value>
@@ -8826,8 +8826,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
 </root>

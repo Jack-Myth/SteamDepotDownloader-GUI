@@ -231,4 +231,7 @@ To use ManifestID for other branch, try Advanced Input</value>
   <data name="refreshCookieRequest" xml:space="preserve">
     <value>It may caused by invalid cookies,do you want to input new cookies?</value>
   </data>
+  <data name="nomanifesthistory" xml:space="preserve">
+    <value>SteamDB doesn't have the infomation of this Depot</value>
+  </data>
 </root>

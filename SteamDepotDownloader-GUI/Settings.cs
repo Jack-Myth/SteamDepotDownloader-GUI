@@ -33,14 +33,17 @@ namespace SteamDepotDownloader_GUI
 
         private void buttonClearCache_Click(object sender, EventArgs e)
         {
-            var FileList = System.IO.Directory.GetFiles(Program.CacheDir);
-            foreach (string FileName in FileList)
+            if (System.IO.Directory.Exists(Program.CacheDir))
             {
-                try
+                var FileList = System.IO.Directory.GetFiles(Program.CacheDir);
+                foreach (string FileName in FileList)
                 {
-                    System.IO.File.Delete(FileName);
+                    try
+                    {
+                        System.IO.File.Delete(FileName);
+                    }
+                    catch { };
                 }
-                catch { };
             }
             DepotDownloader.ConfigStore.TheConfig.LoginKeys.Clear();
             DepotDownloader.ConfigStore.TheConfig.LastManifests.Clear();

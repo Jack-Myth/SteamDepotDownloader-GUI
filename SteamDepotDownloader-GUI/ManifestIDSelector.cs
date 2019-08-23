@@ -96,10 +96,23 @@ Refresh:
                 }
                 HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(webPageStr);
+                if (doc.DocumentNode.SelectSingleNode("//title").GetDirectInnerText() == "Just a moment... · Steam Database")
+                {
+                    /*if (MessageBox.Show(Resources.FailedToGetManifestHistory + "\n" + Resources.refreshCookieRequest
+                        , "SteamDepotDownloaderGUI", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)*/
+                    {
+                        ConfigStore.TheConfig.StoredCookies.Remove("__cfduid");
+                        ConfigStore.TheConfig.StoredCookies.Remove("cf_clearance");
+                        goto Refresh;
+                    }
+                    /*PendingReturnManifestID = ContentDownloader.INVALID_MANIFEST_ID;
+                    Close();
+                    return;*/
+                }
                 ManifestHistoryRecord manifestHistoryRecord= new ManifestHistoryRecord();
                 var DepotInfoNode = doc.DocumentNode.SelectNodes("//div[@class='wrapper-info scope-depot']/div/table/tbody/tr");
                 //Check if xpath is succeed.
-                if (DepotInfoNode.Count != 0)
+                if (DepotInfoNode != null)
                 {
                     //The sequence for these data seems to be fixed,so use Index directly.
                     //Actually maybe use ChildNodes[0] will be better?
@@ -109,20 +122,13 @@ Refresh:
                     manifestHistoryRecord.DepotName = DepotInfoNode[3].ChildNodes[3].GetDirectInnerText();
                     manifestHistoryRecord.LastUpdate = DepotInfoNode[4].SelectSingleNode("//i").GetDirectInnerText();
                 }
-                DepotInfoNode = doc.DocumentNode.SelectNodes("//div[@id='manifests']/div[@class='table-responsive']/table/tbody/tr");
-                if (DepotInfoNode.Count == 0)
+                else
                 {
-                    if(MessageBox.Show(Resources.FailedToGetManifestHistory+"\n"+Resources.refreshCookieRequest
-                        , "SteamDepotDownloaderGUI", MessageBoxButtons.YesNo, MessageBoxIcon.Error)==DialogResult.Yes)
-                    {
-                        ConfigStore.TheConfig.StoredCookies.Remove("__cfduid");
-                        ConfigStore.TheConfig.StoredCookies.Remove("cf_clearance");
-                        goto Refresh;
-                    }
-                    PendingReturnManifestID = ContentDownloader.INVALID_MANIFEST_ID;
+                    MessageBox.Show(Resources.nomanifesthistory, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                     return;
                 }
+                DepotInfoNode = doc.DocumentNode.SelectNodes("//div[@id='manifests']/div[@class='table-responsive']/table/tbody/tr");
                 manifestHistoryRecord.HistoryCollection = new List<ManifestHistoryRecord.ManifestHistoryRecordSingle>();
                 for (int i = 0; i < DepotInfoNode.Count; i++)
                 {

@@ -325,6 +325,15 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 SteamDB doesn&apos;t have the infomation of this Depot 的本地化字符串。
+        /// </summary>
+        internal static string nomanifesthistory {
+            get {
+                return ResourceManager.GetString("nomanifesthistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 No valid Manifest ID 的本地化字符串。
         /// </summary>
         internal static string NoManifestID {

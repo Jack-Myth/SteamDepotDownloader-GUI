@@ -228,4 +228,7 @@
   <data name="refreshCookieRequest" xml:space="preserve">
     <value>这可能是由于过期的Cookies引起的，你想要重新输入Cookies吗？</value>
   </data>
+  <data name="nomanifesthistory" xml:space="preserve">
+    <value>SteamDB 没有这个Depot的信息</value>
+  </data>
 </root>
