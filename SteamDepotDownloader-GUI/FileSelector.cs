@@ -23,24 +23,28 @@ namespace SteamDepotDownloader_GUI
         float SizeDivisor = 1024f;
         string UnitStr = "KB";
 
-        public FileSelector(uint appId,uint depotId,string branch)
+        public FileSelector(uint appId,uint depotId,string branch,ulong m_ManifestID)
         {
             InitializeComponent();
             this.ControlBox = false;
             AppID = appId;
             DepotID = depotId;
             Branch = branch;
+            ManifestID = m_ManifestID;
         }
 
         private async void FileSelector_LoadAsync(object sender, EventArgs e)
         {
+            string Title = this.Text;
             string Password = "";
-            ManifestID = ContentDownloader.GetSteam3DepotManifestStatic(DepotID, AppID, Branch,ref Password);
+            if(ManifestID==ContentDownloader.INVALID_MANIFEST_ID)
+                ManifestID = ContentDownloader.GetSteam3DepotManifestStatic(DepotID, AppID, Branch,ref Password);
             if (ManifestID == ContentDownloader.INVALID_MANIFEST_ID)
             {
                 MessageBox.Show(Properties.Resources.NoManifestID, "FileSelector", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+            this.labelManifestID.Text = "ManifestID:" + ManifestID.ToString();
             System.IO.Directory.CreateDirectory(Program.CacheDir);
             var localProtoManifest = DepotDownloader.ProtoManifest.LoadFromFile(string.Format("{0}/{1}.bin",Program.CacheDir, ManifestID));
             if (localProtoManifest!=null)
@@ -128,6 +132,7 @@ namespace SteamDepotDownloader_GUI
                 }
                 this.labelSize.Text = string.Format("{0}{1}/{2}{1}", 0.ToString("#0.00"), UnitStr, (DepotMaxSize / SizeDivisor).ToString("#0.00"));
             }
+            this.Text = Title;
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

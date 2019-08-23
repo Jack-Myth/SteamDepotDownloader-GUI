@@ -184,7 +184,7 @@ namespace SteamDepotDownloader_GUI
             uint AppID = Keys.ElementAt(appList.SelectedIndex);
             if (this.checkBox1.Checked)
             {
-                (new FileSelector(AppID,DepotID,this.comboBranches.Text)).ShowDialog();
+                (new FileSelector(AppID,DepotID,this.comboBranches.Text,PendingManifestID)).ShowDialog();
             }
         }
 

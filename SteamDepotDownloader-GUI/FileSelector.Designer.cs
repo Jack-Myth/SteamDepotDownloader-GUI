@@ -35,6 +35,7 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.treeViewFileList = new System.Windows.Forms.TreeView();
+            this.labelManifestID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -75,10 +76,16 @@
             this.treeViewFileList.Name = "treeViewFileList";
             this.treeViewFileList.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeViewFileList_AfterCheck);
             // 
+            // labelManifestID
+            // 
+            resources.ApplyResources(this.labelManifestID, "labelManifestID");
+            this.labelManifestID.Name = "labelManifestID";
+            // 
             // FileSelector
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelManifestID);
             this.Controls.Add(this.treeViewFileList);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
@@ -100,5 +107,6 @@
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TreeView treeViewFileList;
+        private System.Windows.Forms.Label labelManifestID;
     }
 }
