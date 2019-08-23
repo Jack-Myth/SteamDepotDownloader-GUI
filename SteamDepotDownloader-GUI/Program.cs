@@ -36,8 +36,6 @@ namespace SteamDepotDownloader_GUI
         public static Log LogForm;
         public const string CacheDir = "./Cache";
 
-        public static WeakReference<HtmlAgilityPack.HtmlWeb> htmlWebWeakInstance = new WeakReference<HtmlAgilityPack.HtmlWeb>(null);
-
         public static Dictionary<uint, ManifestHistoryRecord> ManifestHistoryCache = new Dictionary<uint, ManifestHistoryRecord>();
 
         public static List<DepotDownloader.ContentDownloader> DownloaderInstances=new List<DepotDownloader.ContentDownloader>();

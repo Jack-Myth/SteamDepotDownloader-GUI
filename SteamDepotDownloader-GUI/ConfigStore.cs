@@ -65,6 +65,10 @@ namespace DepotDownloader
         [ProtoMember(9, IsRequired = false)]
         public bool MinimizeToTray = false;
 
+        [ProtoMember(10, IsRequired = false)]
+        public Dictionary<string, string> StoredCookies { get; set; }
+
+
         string FileName = null;
 
         ConfigStore()
@@ -74,6 +78,7 @@ namespace DepotDownloader
             ContentServerPenalty = new System.Collections.Concurrent.ConcurrentDictionary<string, int>();
             LoginKeys = new Dictionary<string, string>();
             LastManifests = new Dictionary<uint, ulong>();
+            StoredCookies = new Dictionary<string, string>();
         }
 
         static bool Loaded

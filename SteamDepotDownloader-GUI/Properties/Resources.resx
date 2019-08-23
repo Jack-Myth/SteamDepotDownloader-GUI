@@ -222,4 +222,13 @@ To use ManifestID for other branch, try Advanced Input</value>
   <data name="dbconnectfailed" xml:space="preserve">
     <value>Connection to SteamDB out of time</value>
   </data>
+  <data name="InputSteamDBCookies" xml:space="preserve">
+    <value>Please Input the Cookies for SteamDB(__cfduid and cf_clearance)</value>
+  </data>
+  <data name="InvalidCookies" xml:space="preserve">
+    <value>Invalid Cookies</value>
+  </data>
+  <data name="refreshCookieRequest" xml:space="preserve">
+    <value>It may caused by invalid cookies,do you want to input new cookies?</value>
+  </data>
 </root>

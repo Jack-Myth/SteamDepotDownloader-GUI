@@ -219,4 +219,13 @@
   <data name="dbconnectfailed" xml:space="preserve">
     <value>连接SteamDB超时</value>
   </data>
+  <data name="InputSteamDBCookies" xml:space="preserve">
+    <value>请输入SteamDB的Cookies(__cfduid 和 cf_clearance)</value>
+  </data>
+  <data name="InvalidCookies" xml:space="preserve">
+    <value>无效的Cookies</value>
+  </data>
+  <data name="refreshCookieRequest" xml:space="preserve">
+    <value>这可能是由于过期的Cookies引起的，你想要重新输入Cookies吗？</value>
+  </data>
 </root>

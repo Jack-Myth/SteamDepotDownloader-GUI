@@ -44,6 +44,7 @@ namespace SteamDepotDownloader_GUI
             }
             DepotDownloader.ConfigStore.TheConfig.LoginKeys.Clear();
             DepotDownloader.ConfigStore.TheConfig.LastManifests.Clear();
+            DepotDownloader.ConfigStore.TheConfig.StoredCookies.Clear();
             DepotDownloader.ConfigStore.Save();
             MessageBox.Show(Properties.Resources.CacheCleared, "Settings", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

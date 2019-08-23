@@ -226,6 +226,24 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Please Input the Cookies for SteamDB(__cfduid and cf_clearance) 的本地化字符串。
+        /// </summary>
+        internal static string InputSteamDBCookies {
+            get {
+                return ResourceManager.GetString("InputSteamDBCookies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Invalid Cookies 的本地化字符串。
+        /// </summary>
+        internal static string InvalidCookies {
+            get {
+                return ResourceManager.GetString("InvalidCookies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Steam login failed!Try check your account and password. 的本地化字符串。
         /// </summary>
         internal static string LoginFailed {
@@ -330,6 +348,15 @@ namespace SteamDepotDownloader_GUI.Properties {
         internal static string ParamterError {
             get {
                 return ResourceManager.GetString("ParamterError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 It may caused by invalid cookies,do you want to input new cookies? 的本地化字符串。
+        /// </summary>
+        internal static string refreshCookieRequest {
+            get {
+                return ResourceManager.GetString("refreshCookieRequest", resourceCulture);
             }
         }
         
