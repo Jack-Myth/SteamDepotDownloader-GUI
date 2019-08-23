@@ -36,66 +36,66 @@ namespace SteamDepotDownloader_GUI
         {
 Refresh:
             this.Text = Resources.GettingManifestHistory;
-            if (!(ConfigStore.TheConfig.StoredCookies.ContainsKey("__cfduid")&&
-                ConfigStore.TheConfig.StoredCookies.ContainsKey("cf_clearance")))
-            {
-                do
-                {
-                    string CookieStr = "__cfduid=cookie1;cf_clearance=cookie2";
-                    System.Diagnostics.Process.Start("https://steamdb.info");
-                    if (Util.InputBox(Resources.InputSteamDBCookies, Resources.InputSteamDBCookies, ref CookieStr) == DialogResult.OK)
-                    {
-                        string[] Cookies = CookieStr.Split(';');
-                        Dictionary<string, string> tmpCookieContainner = new Dictionary<string, string>();
-                        for (int i = 0; i < Cookies.Length; i++)
-                        {
-                            string[] CookieItem = Cookies[i].Split('=');
-                            if (CookieItem.Length < 2)
-                                break;
-                            tmpCookieContainner.Add(CookieItem[0], CookieItem[1]);
-                        }
-                        if (tmpCookieContainner.ContainsKey("__cfduid") && tmpCookieContainner.ContainsKey("cf_clearance"))
-                        {
-                            ConfigStore.TheConfig.StoredCookies["__cfduid"] = tmpCookieContainner["__cfduid"];
-                            ConfigStore.TheConfig.StoredCookies["cf_clearance"] = tmpCookieContainner["cf_clearance"];
-                            ConfigStore.Save();
-                            break;
-                        }
-                    }
-                    MessageBox.Show(Resources.InvalidCookies, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                } while (false);
-            }
-            var webClient = new WebClient();
-            webClient.Encoding = Encoding.UTF8;
-            webClient.Headers.Add(HttpRequestHeader.Cookie,
-                string.Format("__cfduid={0}; cf_clearance={1}", ConfigStore.TheConfig.StoredCookies["__cfduid"],
-                ConfigStore.TheConfig.StoredCookies["cf_clearance"]));
-            webClient.Headers.Add(HttpRequestHeader.Accept, "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3");
-            webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.19 Safari/537.36 Edg/77.0.235.9");
-            //webClient.Headers.Add(HttpRequestHeader.re)
-            string webPageStr;
-            try
-            {
-                webPageStr = await webClient.DownloadStringTaskAsync("https://steamdb.info/depot/" + PendingDepotID.ToString() + "/manifests/");
-            }
-            catch
-            {
-                if (MessageBox.Show(Resources.FailedToGetManifestHistory + "\n" + Resources.refreshCookieRequest
-                        , "SteamDepotDownloaderGUI", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
-                {
-                    ConfigStore.TheConfig.StoredCookies.Remove("__cfduid");
-                    ConfigStore.TheConfig.StoredCookies.Remove("cf_clearance");
-                    goto Refresh;
-                }
-                PendingReturnManifestID = ContentDownloader.INVALID_MANIFEST_ID;
-                Close();
-                return;
-            }
-            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-            doc.LoadHtml(webPageStr);
             //var doc = await webClient.LoadFromWebAsync("https://steamdb.info/depot/" + PendingDepotID.ToString() + "/manifests/");
             if (!Program.ManifestHistoryCache.ContainsKey(PendingDepotID))
             {
+                if (!(ConfigStore.TheConfig.StoredCookies.ContainsKey("__cfduid") &&
+                ConfigStore.TheConfig.StoredCookies.ContainsKey("cf_clearance")))
+                {
+                    do
+                    {
+                        string CookieStr = "__cfduid=cookie1;cf_clearance=cookie2";
+                        System.Diagnostics.Process.Start("https://steamdb.info");
+                        if (Util.InputBox(Resources.InputSteamDBCookies, Resources.InputSteamDBCookies, ref CookieStr) == DialogResult.OK)
+                        {
+                            string[] Cookies = CookieStr.Split(';');
+                            Dictionary<string, string> tmpCookieContainner = new Dictionary<string, string>();
+                            for (int i = 0; i < Cookies.Length; i++)
+                            {
+                                string[] CookieItem = Cookies[i].Split('=');
+                                if (CookieItem.Length < 2)
+                                    break;
+                                tmpCookieContainner.Add(CookieItem[0], CookieItem[1]);
+                            }
+                            if (tmpCookieContainner.ContainsKey("__cfduid") && tmpCookieContainner.ContainsKey("cf_clearance"))
+                            {
+                                ConfigStore.TheConfig.StoredCookies["__cfduid"] = tmpCookieContainner["__cfduid"];
+                                ConfigStore.TheConfig.StoredCookies["cf_clearance"] = tmpCookieContainner["cf_clearance"];
+                                ConfigStore.Save();
+                                break;
+                            }
+                        }
+                        MessageBox.Show(Resources.InvalidCookies, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    } while (false);
+                }
+                var webClient = new WebClient();
+                webClient.Encoding = Encoding.UTF8;
+                webClient.Headers.Add(HttpRequestHeader.Cookie,
+                    string.Format("__cfduid={0}; cf_clearance={1}", ConfigStore.TheConfig.StoredCookies["__cfduid"],
+                    ConfigStore.TheConfig.StoredCookies["cf_clearance"]));
+                webClient.Headers.Add(HttpRequestHeader.Accept, "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3");
+                webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.19 Safari/537.36 Edg/77.0.235.9");
+                //webClient.Headers.Add(HttpRequestHeader.re)
+                string webPageStr;
+                try
+                {
+                    webPageStr = await webClient.DownloadStringTaskAsync("https://steamdb.info/depot/" + PendingDepotID.ToString() + "/manifests/");
+                }
+                catch
+                {
+                    if (MessageBox.Show(Resources.FailedToGetManifestHistory + "\n" + Resources.refreshCookieRequest
+                            , "SteamDepotDownloaderGUI", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    {
+                        ConfigStore.TheConfig.StoredCookies.Remove("__cfduid");
+                        ConfigStore.TheConfig.StoredCookies.Remove("cf_clearance");
+                        goto Refresh;
+                    }
+                    PendingReturnManifestID = ContentDownloader.INVALID_MANIFEST_ID;
+                    Close();
+                    return;
+                }
+                HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                doc.LoadHtml(webPageStr);
                 ManifestHistoryRecord manifestHistoryRecord= new ManifestHistoryRecord();
                 var DepotInfoNode = doc.DocumentNode.SelectNodes("//div[@class='wrapper-info scope-depot']/div/table/tbody/tr");
                 //Check if xpath is succeed.

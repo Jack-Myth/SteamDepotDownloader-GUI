@@ -352,19 +352,19 @@
     <value>Date</value>
   </data>
   <data name="columnHeaderDate.Width" type="System.Int32, mscorlib">
-    <value>158</value>
+    <value>232</value>
   </data>
   <data name="columnHeaderRDate.Text" xml:space="preserve">
     <value>Relative Date</value>
   </data>
   <data name="columnHeaderRDate.Width" type="System.Int32, mscorlib">
-    <value>154</value>
+    <value>122</value>
   </data>
   <data name="columnHeaderManifestID.Text" xml:space="preserve">
     <value>Manifest ID</value>
   </data>
   <data name="columnHeaderManifestID.Width" type="System.Int32, mscorlib">
-    <value>195</value>
+    <value>145</value>
   </data>
   <data name="listViewManifests.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 101</value>
