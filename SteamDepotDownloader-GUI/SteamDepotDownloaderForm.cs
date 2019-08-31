@@ -568,7 +568,7 @@ namespace SteamDepotDownloader_GUI
 
         public string GetSelectedAppName()
         {
-            return ContentDownloader.Steam3.AppInfo[GetSelectedAppID()].KeyValues["common"]["name"].AsString()
+            return ContentDownloader.Steam3.AppInfo[GetSelectedAppID()].KeyValues["common"]["name"].AsString();
         }
 
         public uint GetSelectedDepotID()
@@ -611,7 +611,7 @@ namespace SteamDepotDownloader_GUI
 
         private void AppmanifestGeneratorToolStripMenuAG_Click(object sender, EventArgs e)
         {
-            new AppmanifestGenerator()
+            new AppmanifestGenerator(GetSelectedAppID()).ShowDialog();
         }
     }
 }

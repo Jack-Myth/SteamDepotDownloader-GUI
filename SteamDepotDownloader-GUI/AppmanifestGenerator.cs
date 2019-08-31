@@ -43,8 +43,8 @@ namespace SteamDepotDownloader_GUI
             PendingExportStr = "\"AppState\"\n{\n";
             PendingExportStr += "\t\"appid\"\t\t\"" + this.mAppID.ToString() + "\"\n";
             PendingExportStr += "\t\"Universe\"\t\t\"1\"\n";
-            PendingExportStr += "\t\"StateFlags\"\t\t\"" + this.textBoxName.ToString() + "\"\n";
-            PendingExportStr += "\t\"installdir\"\t\t\"" + this.textBoxInstallDir.ToString() + "\"\n";
+            PendingExportStr += "\t\"StateFlags\"\t\t\"4\"\n";
+            PendingExportStr += "\t\"installdir\"\t\t\"" + this.textBoxInstallDir.Text + "\"\n";
             PendingExportStr += "\t\"LastUpdated\"\t\t\"" + ConvertDateTimeInt(DateTime.Now).ToString()+ "\"\n";
             PendingExportStr += "\t\"UpdateResult\"\t\t\"0\"\n";
             PendingExportStr += "\t\"SizeOnDisk\"\t\t\"1\"\n";
@@ -54,15 +54,15 @@ namespace SteamDepotDownloader_GUI
             PendingExportStr += "\t\"AutoUpdateBehavior\"\t\t\"1\"\n";
             PendingExportStr += "\t\"AllowOtherDownloadsWhileRunning\"\t\t\"0\"\n";
             PendingExportStr += "\t\"ScheduledAutoUpdate\"\t\t\"0\"\n";
-            PendingExportStr += "\t\"PendingExportStr\"\n\t{\n";
+            PendingExportStr += "\t\"InstalledDepots\"\n\t{\n";
             for (int i = 0; i < this.checkedListBoxDepots.Items.Count; i++)
             {
                 if (this.checkedListBoxDepots.GetItemChecked(i))
                 {
                     string Password = "";
-                    PendingExportStr += "\t\t\"" + DepotList[i].ToString() + "\"\n{";
+                    PendingExportStr += "\t\t\"" + DepotList[i].ToString() + "\"\n\t\t{\n";
                     PendingExportStr+="\t\t\t\"manifest\"\t\t\""+  
-                                      ContentDownloader.GetSteam3DepotManifestStatic(DepotList[i], mAppID, "public", ref Password)+"\"\n\t\t}\t";
+                                      ContentDownloader.GetSteam3DepotManifestStatic(DepotList[i], mAppID, "public", ref Password)+"\"\n\t\t}\n";
                 }
             }
             PendingExportStr += "\t}\n\t\"MountedDepots\"\n\t{\n";
@@ -80,7 +80,7 @@ namespace SteamDepotDownloader_GUI
             PendingExportStr += "\t}\n}";
             this.saveFileDialog1.FileName = "appmanifest_" + mAppID.ToString() + ".acf";
             if (this.saveFileDialog1.ShowDialog()==DialogResult.OK)
-                System.IO..File.WriteAllText(this.saveFileDialog1.FileName, PendingExportStr);
+                System.IO.File.WriteAllText(this.saveFileDialog1.FileName, PendingExportStr);
         }
     }
 }
