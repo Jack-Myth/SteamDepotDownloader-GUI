@@ -35,15 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelAppID = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkedListBoxDLCs = new System.Windows.Forms.CheckedListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkedListBoxDepots = new System.Windows.Forms.CheckedListBox();
             this.buttonGen = new System.Windows.Forms.Button();
-            this.buttonSelectManifestID = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,31 +110,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BaseInfomation";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.checkedListBoxDLCs);
-            this.groupBox2.Location = new System.Drawing.Point(13, 139);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(245, 145);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "InstalledDLCs";
-            // 
-            // checkedListBoxDLCs
-            // 
-            this.checkedListBoxDLCs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkedListBoxDLCs.FormattingEnabled = true;
-            this.checkedListBoxDLCs.Location = new System.Drawing.Point(6, 21);
-            this.checkedListBoxDLCs.Name = "checkedListBoxDLCs";
-            this.checkedListBoxDLCs.Size = new System.Drawing.Size(233, 116);
-            this.checkedListBoxDLCs.TabIndex = 0;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.checkedListBoxDepots);
-            this.groupBox3.Location = new System.Drawing.Point(13, 293);
+            this.groupBox3.Location = new System.Drawing.Point(13, 139);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(245, 145);
             this.groupBox3.TabIndex = 3;
@@ -157,31 +133,21 @@
             // 
             // buttonGen
             // 
-            this.buttonGen.Location = new System.Drawing.Point(13, 473);
+            this.buttonGen.Location = new System.Drawing.Point(13, 290);
             this.buttonGen.Name = "buttonGen";
             this.buttonGen.Size = new System.Drawing.Size(245, 23);
             this.buttonGen.TabIndex = 4;
             this.buttonGen.Text = "Generate";
             this.buttonGen.UseVisualStyleBackColor = true;
-            // 
-            // buttonSelectManifestID
-            // 
-            this.buttonSelectManifestID.Location = new System.Drawing.Point(133, 444);
-            this.buttonSelectManifestID.Name = "buttonSelectManifestID";
-            this.buttonSelectManifestID.Size = new System.Drawing.Size(119, 23);
-            this.buttonSelectManifestID.TabIndex = 5;
-            this.buttonSelectManifestID.Text = "SelectManifestID";
-            this.buttonSelectManifestID.UseVisualStyleBackColor = true;
+            this.buttonGen.Click += new System.EventHandler(this.ButtonGen_Click);
             // 
             // AppmanifestGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 506);
-            this.Controls.Add(this.buttonSelectManifestID);
+            this.ClientSize = new System.Drawing.Size(272, 324);
             this.Controls.Add(this.buttonGen);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -191,7 +157,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -206,11 +171,9 @@
         private System.Windows.Forms.TextBox textBoxInstallDir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBoxDLCs;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckedListBox checkedListBoxDepots;
         private System.Windows.Forms.Button buttonGen;
-        private System.Windows.Forms.Button buttonSelectManifestID;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

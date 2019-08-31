@@ -68,7 +68,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.buttonToolsMenu = new System.Windows.Forms.Button();
             this.contextMenuStripTools = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.appmanifestGeneratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appmanifestGeneratorToolStripMenuAG = new System.Windows.Forms.ToolStripMenuItem();
             this.groupDepotInfo.SuspendLayout();
             this.groupBoxDownloading.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -308,15 +308,15 @@
             // contextMenuStripTools
             // 
             this.contextMenuStripTools.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.appmanifestGeneratorToolStripMenuItem});
+            this.appmanifestGeneratorToolStripMenuAG});
             this.contextMenuStripTools.Name = "contextMenuStripTools";
             resources.ApplyResources(this.contextMenuStripTools, "contextMenuStripTools");
             // 
-            // appmanifestGeneratorToolStripMenuItem
+            // appmanifestGeneratorToolStripMenuAG
             // 
-            this.appmanifestGeneratorToolStripMenuItem.Name = "appmanifestGeneratorToolStripMenuItem";
-            resources.ApplyResources(this.appmanifestGeneratorToolStripMenuItem, "appmanifestGeneratorToolStripMenuItem");
-            this.appmanifestGeneratorToolStripMenuItem.Click += new System.EventHandler(this.AppmanifestGeneratorToolStripMenuItem_Click);
+            this.appmanifestGeneratorToolStripMenuAG.Name = "appmanifestGeneratorToolStripMenuAG";
+            resources.ApplyResources(this.appmanifestGeneratorToolStripMenuAG, "appmanifestGeneratorToolStripMenuAG");
+            this.appmanifestGeneratorToolStripMenuAG.Click += new System.EventHandler(this.AppmanifestGeneratorToolStripMenuAG_Click);
             // 
             // SteamDepotDownloaderForm
             // 
@@ -403,7 +403,7 @@
         private System.Windows.Forms.Button buttonSelectManifest;
         private System.Windows.Forms.Button buttonToolsMenu;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripTools;
-        private System.Windows.Forms.ToolStripMenuItem appmanifestGeneratorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem appmanifestGeneratorToolStripMenuAG;
     }
 }
 

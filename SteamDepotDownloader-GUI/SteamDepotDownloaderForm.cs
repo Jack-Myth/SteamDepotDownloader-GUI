@@ -559,9 +559,59 @@ namespace SteamDepotDownloader_GUI
                 this.buttonToolsMenu.Location.Y)));
         }
 
-        private void AppmanifestGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
+        public uint GetSelectedAppID()
         {
+            var Keys = (Dictionary<uint, SteamApps.PICSProductInfoCallback.PICSProductInfo>.KeyCollection)this.appList.Tag;
+            uint AppID = Keys.ElementAt(appList.SelectedIndex);
+            return AppID;
+        }
 
+        public string GetSelectedAppName()
+        {
+            return ContentDownloader.Steam3.AppInfo[GetSelectedAppID()].KeyValues["common"]["name"].AsString()
+        }
+
+        public uint GetSelectedDepotID()
+        {
+            var listDepotIDs = (List<uint>)this.listDepots.Tag;
+            uint DepotID = listDepotIDs[this.listDepots.SelectedIndex];
+            return DepotID;
+        }
+
+        public List<uint> GetDepotsByAppID(uint AppID)
+        {
+            var DepotList = new List<uint>();
+            var depotsValue = ContentDownloader.Steam3.AppInfo[AppID].KeyValues["depots"];
+            int PublicBranchIndex = -1;
+            foreach (KeyValue branches in depotsValue["branches"].Children)
+            {
+                int BranchIndex = this.comboBranches.Items.Add(branches.Name);
+                if (branches.Name.Equals("public", StringComparison.CurrentCultureIgnoreCase))
+                    PublicBranchIndex = BranchIndex;
+            }
+            if (PublicBranchIndex >= 0)
+                this.comboBranches.SelectedIndex = PublicBranchIndex;
+            else if (comboBranches.Items.Count > 0)
+                this.comboBranches.SelectedIndex = 0;
+            foreach (KeyValue depot in depotsValue.Children)
+            {
+                uint DepotID;
+                if (uint.TryParse(depot.Name, out DepotID))
+                {
+                    DepotList.Add(DepotID);
+                }
+            }
+            return DepotList;
+        }
+
+        public KeyValue GetDepotValue(uint AppID, uint DepotID)
+        {
+            return ContentDownloader.Steam3.AppInfo[AppID].KeyValues["depots"][DepotID.ToString()];
+        }
+
+        private void AppmanifestGeneratorToolStripMenuAG_Click(object sender, EventArgs e)
+        {
+            new AppmanifestGenerator()
         }
     }
 }
