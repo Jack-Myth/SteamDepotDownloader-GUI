@@ -163,6 +163,9 @@
     <EmbeddedResource Include="AppmanifestGenerator.resx">
       <DependentUpon>AppmanifestGenerator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppmanifestGenerator.zh.resx">
+      <DependentUpon>AppmanifestGenerator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AutoLogin.resx">
       <DependentUpon>AutoLogin.cs</DependentUpon>
     </EmbeddedResource>

@@ -234,4 +234,7 @@ To use ManifestID for other branch, try Advanced Input</value>
   <data name="nomanifesthistory" xml:space="preserve">
     <value>SteamDB doesn't have the infomation of this Depot</value>
   </data>
+  <data name="NeedLogin" xml:space="preserve">
+    <value>Need Login!</value>
+  </data>
 </root>

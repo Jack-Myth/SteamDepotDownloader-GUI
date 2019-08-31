@@ -117,121 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 12</value>
   </data>
-  <data name="Apps" xml:space="preserve">
-    <value>{0} Apps</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>安装文件夹：</value>
   </data>
-  <data name="UpdateAppListMsg" xml:space="preserve">
-    <value>正在更新App列表</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 12</value>
   </data>
-  <data name="DownloadingFileList" xml:space="preserve">
-    <value>正在下载文件列表...</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>名称：</value>
   </data>
-  <data name="LogoutQuestion" xml:space="preserve">
-    <value>已登陆，你要注销吗？</value>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>基本信息</value>
   </data>
-  <data name="DownloadSuccessful" xml:space="preserve">
-    <value>Depot {0} 下载成功！</value>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>已安装的Depot</value>
   </data>
-  <data name="SameTask" xml:space="preserve">
-    <value>已有一个相同的任务了。</value>
-  </data>
-  <data name="BetaPasswordRequest" xml:space="preserve">
-    <value>Depot需要密码</value>
-  </data>
-  <data name="ChooseInstallDirectory" xml:space="preserve">
-    <value>选择安装位置</value>
-  </data>
-  <data name="AutoLoginFailed" xml:space="preserve">
-    <value>自动登陆失败，请用密码再试一次</value>
-  </data>
-  <data name="LoginFailed" xml:space="preserve">
-    <value>Steam登陆失败，请检查用户名和密码</value>
-  </data>
-  <data name="NoManifestID" xml:space="preserve">
-    <value>没有有效的 Manifest ID</value>
-  </data>
-  <data name="NoDepotKey" xml:space="preserve">
-    <value>没有有效的 depot 密钥.</value>
-  </data>
-  <data name="DownloadFailed" xml:space="preserve">
-    <value>Depot {0} 下载失败!</value>
-  </data>
-  <data name="SteamGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SteamGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ClearFileListQuestion" xml:space="preserve">
-    <value>清除文件列表？</value>
-  </data>
-  <data name="FileListLoaded" xml:space="preserve">
-    <value>文件列表已加载</value>
-  </data>
-  <data name="ParamterError" xml:space="preserve">
-    <value>无效参数！</value>
-  </data>
-  <data name="CacheCleared" xml:space="preserve">
-    <value>缓存已清空</value>
-  </data>
-  <data name="DepotNotListOrNotSupport" xml:space="preserve">
-    <value>Depot {0} 未在App {1} 中列出，或不支持该平台</value>
-  </data>
-  <data name="NoAnyDepots" xml:space="preserve">
-    <value>在 {0} 找不到任何可下载的Depot</value>
-  </data>
-  <data name="NotAvailableForThisAccount" xml:space="preserve">
-    <value>App {0} ({1}) 在此账户上不可用.</value>
-  </data>
-  <data name="mids_BuildID" xml:space="preserve">
-    <value>Build ID:{0}</value>
-  </data>
-  <data name="mids_DepotID" xml:space="preserve">
-    <value>Depot ID:{0}</value>
-  </data>
-  <data name="mids_DepotName" xml:space="preserve">
-    <value>Depot 名称:{0}</value>
-  </data>
-  <data name="mids_LastUpdate" xml:space="preserve">
-    <value>最后一次更新:{0}</value>
-  </data>
-  <data name="mids_ManifestID" xml:space="preserve">
-    <value>Manifest ID:{0}</value>
-  </data>
-  <data name="FailedToGetManifestHistory" xml:space="preserve">
-    <value>获取Manifest历史失败!</value>
-  </data>
-  <data name="GettingManifestHistory" xml:space="preserve">
-    <value>正在获取Manifest历史记录...</value>
-  </data>
-  <data name="bnp_nomanifest" xml:space="preserve">
-    <value>SteamDB 只有public分支的Manifest历史
-若需要指定其他分支的Manifest，请使用高级输入</value>
-  </data>
-  <data name="CurrentManifestID" xml:space="preserve">
-    <value>当前ManifestID:
-{0}</value>
-  </data>
-  <data name="Default" xml:space="preserve">
-    <value>(默认)</value>
-  </data>
-  <data name="dbconnectfailed" xml:space="preserve">
-    <value>连接SteamDB超时</value>
-  </data>
-  <data name="InputSteamDBCookies" xml:space="preserve">
-    <value>请输入SteamDB的Cookies(__cfduid 和 cf_clearance)</value>
-  </data>
-  <data name="InvalidCookies" xml:space="preserve">
-    <value>无效的Cookies</value>
-  </data>
-  <data name="refreshCookieRequest" xml:space="preserve">
-    <value>这可能是由于过期的Cookies引起的，你想要重新输入Cookies吗？</value>
-  </data>
-  <data name="nomanifesthistory" xml:space="preserve">
-    <value>SteamDB 没有这个Depot的信息</value>
-  </data>
-  <data name="NeedLogin" xml:space="preserve">
-    <value>需要登陆！</value>
+  <data name="buttonGen.Text" xml:space="preserve">
+    <value>生成</value>
   </data>
 </root>

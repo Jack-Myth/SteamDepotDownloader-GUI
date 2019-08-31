@@ -4518,6 +4518,18 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </value>
   </data>
+  <data name="buttonToolsMenu.Text" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="appmanifestGeneratorToolStripMenuAG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="appmanifestGeneratorToolStripMenuAG.Text" xml:space="preserve">
+    <value>Appmanifest生成器</value>
+  </data>
+  <data name="contextMenuStripTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 48</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>731, 620</value>
   </data>

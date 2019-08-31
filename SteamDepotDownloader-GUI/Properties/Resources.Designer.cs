@@ -307,6 +307,15 @@ namespace SteamDepotDownloader_GUI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Need Login! 的本地化字符串。
+        /// </summary>
+        internal static string NeedLogin {
+            get {
+                return ResourceManager.GetString("NeedLogin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Couldn&apos;t find any depots to download for app {0} 的本地化字符串。
         /// </summary>
         internal static string NoAnyDepots {

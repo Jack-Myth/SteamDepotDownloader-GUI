@@ -15,6 +15,7 @@ using System.Xml;
 using DepotDownloader;
 using SteamDepotDownloader_GUI.Properties;
 using SteamKit2;
+using SteamKit2.Unified.Internal;
 
 namespace SteamDepotDownloader_GUI
 {
@@ -561,6 +562,8 @@ namespace SteamDepotDownloader_GUI
 
         public uint GetSelectedAppID()
         {
+            if (appList.SelectedIndex < 0)
+                return 0;
             var Keys = (Dictionary<uint, SteamApps.PICSProductInfoCallback.PICSProductInfo>.KeyCollection)this.appList.Tag;
             uint AppID = Keys.ElementAt(appList.SelectedIndex);
             return AppID;
@@ -611,7 +614,15 @@ namespace SteamDepotDownloader_GUI
 
         private void AppmanifestGeneratorToolStripMenuAG_Click(object sender, EventArgs e)
         {
-            new AppmanifestGenerator(GetSelectedAppID()).ShowDialog();
+            if (ContentDownloader.Steam3==null||!ContentDownloader.Steam3.IsConnected)
+            {
+                MessageBox.Show(Resources.NeedLogin,Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            uint AppID = GetSelectedAppID();
+            if (AppID!=0)
+                new AppmanifestGenerator(AppID).ShowDialog();
         }
     }
 }
