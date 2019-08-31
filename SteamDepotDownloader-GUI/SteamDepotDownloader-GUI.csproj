@@ -93,6 +93,12 @@
     <Compile Include="AdvancedInput.Designer.cs">
       <DependentUpon>AdvancedInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppmanifestGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppmanifestGenerator.Designer.cs">
+      <DependentUpon>AppmanifestGenerator.cs</DependentUpon>
+    </Compile>
     <Compile Include="AutoLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="AdvancedInput.resx">
       <DependentUpon>AdvancedInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppmanifestGenerator.resx">
+      <DependentUpon>AppmanifestGenerator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AutoLogin.resx">
       <DependentUpon>AutoLogin.cs</DependentUpon>

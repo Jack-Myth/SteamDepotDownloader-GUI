@@ -551,5 +551,17 @@ namespace SteamDepotDownloader_GUI
             else
                 this.buttonSelectManifest.Text = string.Format(Resources.CurrentManifestID, PendingManifestID.ToString());
         }
+
+        private void ButtonToolsMenu_Click(object sender, EventArgs e)
+        {
+            this.contextMenuStripTools.Show(PointToScreen(new Point(
+                this.buttonToolsMenu.Location.X+this.buttonToolsMenu.Size.Width,
+                this.buttonToolsMenu.Location.Y)));
+        }
+
+        private void AppmanifestGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
