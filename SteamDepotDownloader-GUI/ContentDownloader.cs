@@ -932,7 +932,8 @@ namespace DepotDownloader
                                    }
                                    catch (OperationCanceledException)
                                    {
-                                       break;
+                                        //break;
+                                        continue;
                                    }
 
                                    DepotManifest.ChunkData data = new DepotManifest.ChunkData();
@@ -963,18 +964,21 @@ namespace DepotDownloader
                                            }
                                            else
                                            {
-                                               Logger.Error("Encountered error downloading chunk {0}: {1}", chunkID, response.StatusCode);
+                                               Logger.Error("Encountered error downloading chunk {0}: {1},Retring", chunkID, response.StatusCode);
+                                               continue;
                                            }
                                        }
                                        else
                                        {
-                                           Logger.Error("Encountered error downloading chunk {0}: {1}", chunkID, e.Status);
+                                           Logger.Error("Encountered error downloading chunk {0}: {1}, Retring", chunkID, e.Status);
+                                           continue;
                                        }
                                    }
                                    catch (Exception e)
                                    {
                                        cdnPool.ReturnBrokenConnection(client);
-                                       Logger.Error("Encountered unexpected error downloading chunk {0}: {1}", chunkID, e.Message);
+                                       Logger.Error("Encountered unexpected error downloading chunk {0}: {1}, Retring", chunkID, e.Message);
+                                       continue;
                                    }
                                }
 
