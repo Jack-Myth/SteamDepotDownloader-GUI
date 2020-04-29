@@ -116,11 +116,11 @@ Refresh:
                 {
                     //The sequence for these data seems to be fixed,so use Index directly.
                     //Actually maybe use ChildNodes[0] will be better?
-                    manifestHistoryRecord.DepotID = DepotInfoNode[0].ChildNodes[3].GetDirectInnerText();
-                    manifestHistoryRecord.BuildID = DepotInfoNode[1].ChildNodes[3].GetDirectInnerText();
-                    manifestHistoryRecord.ManifestID = DepotInfoNode[2].ChildNodes[3].GetDirectInnerText();
-                    manifestHistoryRecord.DepotName = DepotInfoNode[3].ChildNodes[3].GetDirectInnerText();
-                    manifestHistoryRecord.LastUpdate = DepotInfoNode[4].SelectSingleNode("//i").GetDirectInnerText();
+                    manifestHistoryRecord.DepotID = DepotInfoNode[0].ChildNodes[3].InnerText;
+                    manifestHistoryRecord.BuildID = DepotInfoNode[1].ChildNodes[3].InnerText;
+                    manifestHistoryRecord.ManifestID = DepotInfoNode[2].ChildNodes[3].InnerText;
+                    manifestHistoryRecord.DepotName = DepotInfoNode[3].ChildNodes[3].InnerText;
+                    manifestHistoryRecord.LastUpdate = DepotInfoNode[4].SelectSingleNode("//i").InnerText;
                 }
                 else
                 {
@@ -135,7 +135,7 @@ Refresh:
                     ManifestHistoryRecord.ManifestHistoryRecordSingle tmpRecord;
                     //Text,Tr,Text,Tr,Text,Tr,Text
                     //We only need,1,3,5
-                    tmpRecord.Date = DepotInfoNode[i].ChildNodes[1].GetDirectInnerText();
+                    tmpRecord.Date = DepotInfoNode[i].ChildNodes[1].InnerText;
                     var relativeDate = DateTime.Now - DateTime.Parse(DepotInfoNode[i].ChildNodes[3].Attributes["title"].Value);
                     string relativeDateStr;
                     if (relativeDate.TotalDays > 365)
@@ -145,7 +145,7 @@ Refresh:
                     else
                         relativeDateStr = ((int)relativeDate.TotalDays).ToString() + " Day" + (relativeDate.TotalDays >= 2 ? "s" : "") + " Ago";
                     tmpRecord.RelativeDate = relativeDateStr;
-                    tmpRecord.ManifestID = ulong.Parse(DepotInfoNode[i].ChildNodes[5].GetDirectInnerText());
+                    tmpRecord.ManifestID = ulong.Parse(DepotInfoNode[i].ChildNodes[5].InnerText);
                     manifestHistoryRecord.HistoryCollection.Add(tmpRecord);
                 }
                 Program.ManifestHistoryCache.Add(PendingDepotID, manifestHistoryRecord);
