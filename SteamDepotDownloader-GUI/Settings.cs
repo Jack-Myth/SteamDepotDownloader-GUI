@@ -23,11 +23,11 @@ namespace SteamDepotDownloader_GUI
         {
             InitializeComponent();
             this.LabelVersion.Text = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            MaxDownload = DepotDownloader.ConfigStore.TheConfig.MaxDownload - 1;
-            MaxServer = DepotDownloader.ConfigStore.TheConfig.MaxServer - 1;
+            MaxDownload = DepotDownloader.ConfigStore.TheConfig.MaxDownload;
+            MaxServer = DepotDownloader.ConfigStore.TheConfig.MaxServer;
             MinimizeToTray = DepotDownloader.ConfigStore.TheConfig.MinimizeToTray;
-            this.comboBoxMaxDownload.SelectedIndex = Clamp(0, 19, MaxDownload);
-            this.comboBoxMaxServer.SelectedIndex = Clamp(0, 19, MaxServer);
+            this.comboBoxMaxDownload.SelectedIndex = Clamp(0, 19, MaxDownload-1);
+            this.comboBoxMaxServer.SelectedIndex = Clamp(0, 19, MaxServer-1);
             this.checkBoxNotify.Checked = MinimizeToTray;
         }
 
@@ -56,7 +56,7 @@ namespace SteamDepotDownloader_GUI
         {
             try
             {
-                int MaxServertmp = int.Parse(comboBoxMaxServer.SelectedText);
+                int MaxServertmp = int.Parse(comboBoxMaxServer.SelectedItem.ToString());
                 if (MaxServer != MaxServertmp)
                 {
                     MaxServer = MaxServertmp;
@@ -71,11 +71,11 @@ namespace SteamDepotDownloader_GUI
         {
             try
             {
-                int MaxDownloadtmp = int.Parse(comboBoxMaxDownload.SelectedText);
+                int MaxDownloadtmp = int.Parse(comboBoxMaxDownload.SelectedItem.ToString());
                 if (MaxDownload != MaxDownloadtmp)
                 {
                     MaxDownload = MaxDownloadtmp;
-                    DepotDownloader.ConfigStore.TheConfig.MaxServer = MaxServer;
+                    DepotDownloader.ConfigStore.TheConfig.MaxDownload = MaxDownloadtmp;
                     DepotDownloader.ConfigStore.Save();
                 }
             }
