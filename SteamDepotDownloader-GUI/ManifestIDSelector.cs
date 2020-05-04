@@ -73,16 +73,17 @@ Refresh:
                 webClient.Headers.Add(HttpRequestHeader.Cookie,
                     string.Format("__cfduid={0}; cf_clearance={1}", ConfigStore.TheConfig.StoredCookies["__cfduid"],
                     ConfigStore.TheConfig.StoredCookies["cf_clearance"]));
-                webClient.Headers.Add(HttpRequestHeader.Accept, "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3");
-                webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.19 Safari/537.36 Edg/77.0.235.9");
+                //webClient.Headers.Add(HttpRequestHeader.Accept, "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3");
+                //webClient.Headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.19 Safari/537.36 Edg/77.0.235.9");
                 //webClient.Headers.Add(HttpRequestHeader.re)
                 string webPageStr;
                 try
                 {
                     webPageStr = await webClient.DownloadStringTaskAsync("https://steamdb.info/depot/" + PendingDepotID.ToString() + "/manifests/");
                 }
-                catch
+                catch(Exception err)
                 {
+                    Logger.Exception(err);
                     if (MessageBox.Show(Resources.FailedToGetManifestHistory + "\n" + Resources.refreshCookieRequest
                             , "SteamDepotDownloaderGUI", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                     {

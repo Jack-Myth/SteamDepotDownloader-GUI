@@ -30,6 +30,8 @@ namespace DepotDownloader
         public static void Exception(Exception exception)
         {
             //_Config.FireOnMessageEvent("exception", exception);
+            Console.WriteLine("Exception:" + exception.Message+"\n"+exception.StackTrace);
+            SteamDepotDownloader_GUI.Log.Logx("Exception:" + exception.Message + "\n" + exception.StackTrace);
         }
 
         public static string Format(string line, params object[] args)
