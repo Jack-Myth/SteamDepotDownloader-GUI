@@ -234,4 +234,7 @@
   <data name="NeedLogin" xml:space="preserve">
     <value>需要登陆！</value>
   </data>
+  <data name="InputManifesID" xml:space="preserve">
+    <value>请输入ManifestID</value>
+  </data>
 </root>

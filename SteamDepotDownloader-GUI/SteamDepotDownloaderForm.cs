@@ -546,7 +546,18 @@ namespace SteamDepotDownloader_GUI
             uint DepotID = 0;
             if (this.listDepots.SelectedIndex >= 0)
                 DepotID = listDepotIDs[this.listDepots.SelectedIndex];
-            PendingManifestID = ManifestIDSelector.ChooseManifestID(DepotID);
+            string PendingManifestIDStr = "";
+            System.Diagnostics.Process.Start("https://steamdb.info/depot/" + DepotID.ToString() + "/manifests/");
+            Util.InputBox("SteamDepotDownloader-GUI", Resources.InputManifesID, ref PendingManifestIDStr);
+            if (PendingManifestIDStr == "")
+            {
+                PendingManifestID = ContentDownloader.INVALID_MANIFEST_ID;
+            }
+            else
+            {
+                if (!ulong.TryParse(PendingManifestIDStr, out PendingManifestID))
+                    PendingManifestID = ContentDownloader.INVALID_MANIFEST_ID;
+            }
             if (PendingManifestID == ContentDownloader.INVALID_MANIFEST_ID)
                 this.buttonSelectManifest.Text = string.Format(Resources.CurrentManifestID, Resources.Default);
             else

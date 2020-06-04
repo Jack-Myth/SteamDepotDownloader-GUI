@@ -127,12 +127,6 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManifestIDSelector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManifestIDSelector.Designer.cs">
-      <DependentUpon>ManifestIDSelector.cs</DependentUpon>
-    </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.zh.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManifestIDSelector.resx">
-      <DependentUpon>ManifestIDSelector.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManifestIDSelector.zh.resx">
-      <DependentUpon>ManifestIDSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.zh.resx" />
     <EmbeddedResource Include="Settings.resx">

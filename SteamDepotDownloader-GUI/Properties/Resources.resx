@@ -237,4 +237,7 @@ To use ManifestID for other branch, try Advanced Input</value>
   <data name="NeedLogin" xml:space="preserve">
     <value>Need Login!</value>
   </data>
+  <data name="InputManifesID" xml:space="preserve">
+    <value>Input ManifesID</value>
+  </data>
 </root>
